@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4){
+//				console.log(xhr.responseText)
+				var data = JSON.parse(xhr.responseText);
+				var xiaohua = data.showapi_res_body.contentlist;
+				console.log(xiaohua);
+				for (var i=0;i<xiaohua.length;i++) {
+					
+					document.body.innerHTML += "<h3>"+(1+i)+".&nbsp;"+xiaohua[i].title+"</h3><p>"+xiaohua[i].text+"</p>";
+				}
+			}
+		}
+		xhr.open("GET","http://route.showapi.com/341-1?showapi_appid=45521&showapi_sign=1d8f16eab6a34f84b6a4c9f45c776b90",true)
+		xhr.send();
+	</script>
+</html>

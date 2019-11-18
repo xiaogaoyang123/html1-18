@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+	</body>
+	<script type="text/javascript">
+	    
+		var count = 0;
+		var timer = setInterval(function() {
+			console.log("★");
+			count++;
+
+			if (count == 300) {
+				clearInterval(timer);
+				callback();
+			}
+		}, 20);
+
+		//回调函数
+
+		function callback() {
+			alert("全部星星输出完毕");
+
+		}
+	</script>
+
+</html>

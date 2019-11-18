@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		function array(){
+			var arr=[80,78,74,82,95,78,56,82,78,68];
+			var max=arr[0];
+			var min=arr[0];
+			var j=0;//最高分下标
+			var k=0;//最低分下标
+			for(var i=0;i<10;i++)
+			{
+				if(arr[i]>max)
+				{
+					max=arr[i];
+					j=i;
+				}
+				if(arr[i]<min)
+				{
+					min=arr[i];
+					k=i;
+				}
+			}
+//			return (j,k);
+//		}
+		console.log(j,k); 
+	</script>
+</html>

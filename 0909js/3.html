@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 400px;
+				height: 100px;
+				background-color: #7FFFD4;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="button" onclick="tj()" value="添加" />
+		<div>123456</div>
+		<div>12345678</div>
+		<div>1234567890</div>
+	</body>
+<script type="text/javascript">
+	function tj(){
+		//前三行放在外面只能添加一次，放在里面可添加多次
+		var box=document.getElementsByTagName("div");
+		var top1=document.createElement("p");
+		top1.innerText="宁愿做别人眼里的傻子";
+		document.body.insertBefore(top1,box[0]);
+	}
+</script>
+</html>

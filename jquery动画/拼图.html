@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 256px;
+				height: 288px;
+				/*border: 1px solid #000;*/
+				position: absolute;
+				background: url(imgs/c.jpg);
+				top: 500px;
+				left: 0;
+			}
+			
+			.box0 {
+				background-position: 0 0;
+			}
+			
+			.box1 {
+				background-position: -256px 0px;
+			}
+			
+			.box2 {
+				background-position: -512px 0px;
+			}
+			.box3 {
+				background-position: -768px 0px;
+			}
+			
+			.box4 {
+				background-position: 0 -288px;
+			}
+			
+			.box5 {
+				background-position: -256px -288px;
+			}
+			
+			.box6 {
+				background-position: -512px -288px;
+			}
+			
+			.box7 {
+				background-position: -768px -288px;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="box0"></div>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+		<div class="box6"></div>
+		<div class="box7"></div>
+		
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("div").each(function(i) {
+				$(this).delay(i * 400).animate({
+					"left": i % 4 * 256,
+					"top": parseInt(i / 4) * 288
+				});
+			});
+		</script>
+	</body>
+
+</html>

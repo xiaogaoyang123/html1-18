@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			input{
+				margin: 10px;
+			}
+			.box{
+				width: 200px;
+				height: 300px;
+				position: absolute;
+				margin: 10px;
+			}
+			.box img{
+				width: 100%;
+				height: 100%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="移动" />
+		<input type="button" name="" id="" value="操作多个属性" />
+		<input type="button" name="" id="" value="使用相对值" />
+		<input type="button" name="" id="" value="使用预定义的值" />
+		<input type="button" name="" id="" value="使用队列功能" />
+		<div class="box">马天宇
+			<img src="img/2.jpg"/>
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("input:first").click(function(){
+			$(".box").animate({"left":1000},3000)
+		})
+		$("input").eq(1).click(function(){
+			$(".box").animate({
+				"left":"10px",
+				"opacity":0.5,
+				"width":"500px",
+				"height":"600px"
+			},3000)
+		})
+		
+		$("input").eq(2).click(function(){
+			$(".box").animate({
+				"left":"500px",
+				"opacity":0.7,
+				"width":"-=50px",
+				"height":"-=60px"
+			},3000)
+		})
+		
+		$("input").eq(3).click(function(){
+			$(".box").animate({
+				"height":"toggle"//也可以写像素值
+			},3000)
+		})
+		$("input").eq(4).click(function(){
+			$(".box").animate({height:'300px',opacity:'0.5'},1000),
+			$(".box").animate({width:'300',opacity:'0.8'},1000),
+			$(".box").animate({height:'100px',opacity:'0.5'},1000),
+			$(".box").animate({width:'100',opacity:'0.8'},1000),
+			$(".box").animate({fontSize:'3em'},"slow")
+		})
+		
+	</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var data;
+        var title;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                data = JSON.parse(xhr.responseText);
+                // console.log(data);
+                data = data.result.data[0];
+                console.log(data);
+                // console.log(compile(str, data))
+                document.write(compile(str, data))
+            }
+        }
+        xhr.open("get", "top.json", true)
+        xhr.send()
+
+        var str = "今日头条:%title%";
+
+        function compile(templateString, dictionary) {
+            return templateString.replace(/\%([a-z]+)\%/g, function(match, $1, index, string) {
+                return dictionary[$1];
+            });
+        }
+    </script>
+</body>
+
+</html>

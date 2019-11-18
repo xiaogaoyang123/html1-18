@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.content{
+				width: 1200px;
+				padding: 10px;
+				margin: 30px auto;
+				/*background-color: navajowhite;*/
+			}
+			nav{
+				width: 1200px;
+				background-color: azure;
+				margin: 0 auto;
+				font-size: 18px;
+				overflow: hidden;
+				
+			}
+			nav a{
+				width: 100px;
+				/*background-color: aquamarine;*/
+				margin-left: 100px;
+				text-decoration: none;
+				float: left;
+			}
+			nav a:hover{
+				color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#">头条</a>
+			<a href="#">科技</a>
+			<a href="#">社会</a>
+			<a href="#">娱乐</a>
+		</nav>
+		<div class="content">
+			
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		var news=["jiekou/top.json","jiekou/keji.json","jiekou/shehui.json","jiekou/yule.json"];
+		function getNews(x){
+			$.ajax({
+			url:news[x],
+			success:function(res){
+				console.log(res);
+				var xinwen=res.result.data;
+				var str="";
+				for (var i=0;i<xinwen.length;i++) {
+					str+="<h3>"+xinwen[i].title+"</h3><a href='"+xinwen[i].url+"'><img src='"+xinwen[i].thumbnail_pic_s+"'/></a>";
+					
+				}
+				$(".content").html(str);
+			}
+		});
+		}
+		getNews(0);
+		$("nav a").click(function(){
+			var x=$(this).index();
+			getNews(x)
+		})
+	</script>
+	
+</html>

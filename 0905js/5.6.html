@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<!--解题思路：
+	如果当前字符 与 上1个字符相同 ==> 计数器加1
+           如果当前字符 与 上1个字符不相同 ==> 统计计数器的数值 并与 之前最长的那个计数器比较
+            如果之前的大 忽略不计
+            如果之前的小 更新 最长计数器，并且更新最长字符。
+           循环结束，输出 最长计数器 个 最长字符。-->
+	<script type="text/javascript">
+		function maxr(char) {
+			var maxCount = 0; //存放最大计数值;
+			var maxChar = ""; //存放重复次数最多的字符
+			var str = char[0];
+			var count = 1;
+			for (var i = 1; i < char.length; i++) {
+				if (str == char[i]) {
+					count++;
+				} else {
+					//更新计数和最长字符
+					count = 1;
+					str = char[i];
+					}
+					
+					if (maxCount < count) {
+						maxCount = count;
+						maxChar = str;
+				}
+					if(maxCount===count){
+						var str2=str[i];
+					}
+
+			}
+			for (var j = 1; j <= maxCount; j++) {
+				document.write(maxChar);
+			}
+		}
+		maxr("mmmiiijjjjjkkkkkkssptr");
+	</script>
+
+</html>
+

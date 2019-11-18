@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		function People(name, age) {
+			//构造函数里面，负责定义一些属性，随着构造函数的执行，这些属性将绑定到new出来的对象身上
+			this.name = name;
+			this.age = age;
+		}
+		//把所有的方法，定义在原型对象身上：
+		People.prototype.sayHello = function() {
+			alert(xiaoming.sayHello == xiaohong.sayHello);
+//			alert("你好,我是" + this.name + "我今年" + this.age + "岁了");
+		}
+		var xiaoming = new People("小明", 12);
+		var xiaohong = new People("小红", 11);
+
+		xiaoming.sayHello();
+		xiaohong.sayHello();
+		//  证明了xiaoming的sayHello方法和xiaohong的，是同一个函数
+	</script>
+
+</html>

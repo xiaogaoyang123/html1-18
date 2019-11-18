@@ -1,0 +1,43 @@
+.navbar {
+	background-color: rgb(65, 177, 103);
+	border: none;
+	border-radius: 0;
+	margin: 0;
+}
+
+.navbar-brand {
+	height: 80px;
+}
+
+.navbar-nav>li>a {
+	font-size: 18px;
+	color: white !important;
+	line-height: 50px;
+}
+
+.navbar-nav>li:hover {
+	background-color: green;
+}
+
+.navbar-toggle {
+	margin-top: 25px;
+}
+
+.banner {
+	width: 100%;
+}
+
+.banner img {
+	width: 100%;
+}
+
+.hot_course {
+	margin-top: 50px;
+}
+
+@media (min-width: 1200px) {
+	.col-zdlg-2-5 {
+		float: left;
+		width: 20%;
+	}
+}

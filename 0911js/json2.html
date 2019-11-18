@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xiaoming={
+			name:"小米",
+			age:15,
+			score:96
+		}
+		console.log(xiaoming);
+		//json.stringify()是序列化函数，用于将对象转化为字符串；json.parse()是反序列化函数，用于将字符串转化为json对象
+		var obj=JSON.stringify(xiaoming);//json的序列化
+		console.log(obj);
+		console.log(JSON.parse(obj));//json的反序列化
+	</script>
+</html>

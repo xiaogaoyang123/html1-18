@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var x = prompt("请输入一个数字");
+			if(x%5==0 && x%6==0)
+			{
+				alert("这个数字同时能被5和6整除");
+				}
+			if(x%5==0 && x%6!=0)
+			{
+				alert("这个数字能被5整除，但不能被6整除");
+			}
+			if(x%5!=0 && x%6==0)
+			{
+				alert("这个数字能被6整除，但不能被5整除");
+			}
+			if(x%5!=0 && x%6!=0)
+			{
+				alert("这个数字既不能被5整除，也不能被6整除");
+			}
+		</script>
+	</body>
+</html>

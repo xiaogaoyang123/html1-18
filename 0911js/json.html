@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//JSON
+		var student={
+			"name":"小明",
+			"age":18,
+			"sex":"男",
+			"score":99
+		}
+	//对象
+	var xiaoming={
+		name:"小花",
+		age:18,
+		score:78
+	}
+	//JSON的遍历
+	for (var i in xiaoming) {
+		console.log(i+":"+xiaoming[i])
+	}
+	
+	for (var i in student) {
+		console.log(i+":"+student[i])
+	}
+	</script>
+</html>

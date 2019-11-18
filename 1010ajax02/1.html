@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dictionary = {
+            name: "小明",
+            age: 18,
+            hobby: "插画"
+        }
+
+
+        var str = "你好我是%name%,我今年%age%岁,我喜欢%hobby%";
+        str = str.replace(/\%([a-z]+)\%/g, function(match, $1, index, string) {
+            return dictionary[$1];
+        });
+
+
+
+        console.log(str);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		var obj = {
+			"name": "小明"
+		}
+		var student = {
+			"name": "爱丽丝"
+		}
+		function fn(x,y){
+			console.log(this.name);
+			console.log(x,y)
+		}
+		//fn();结果为两个undefined
+		//fn.call(obj)
+		fn.call(student,1,233);
+	</script>
+
+</html>

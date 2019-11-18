@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			input {
+				margin: 10px;
+			}
+			
+			.box,
+			.box0 {
+				width: 600px;
+				height: 30px;
+				background-color: #D8BFD8;
+				margin: 10px;
+				color: white;
+				text-align: center;
+				line-height: 30px;
+			}
+			
+			.box1,
+			.box2 {
+				width: 600px;
+				height: 610px;
+				background-color: lavenderblush;
+				margin: 10px;
+				margin-top: -10px;
+				display: none;
+			}
+			
+			.imgs {
+				width: 150px;
+				height: 180px;
+				margin: 10px;
+				float: left;
+			}
+			
+			.imgs img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			p {
+				line-height: 36px;
+				text-indent: 36px;
+				color: darkslateblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="button" name="" id="" value="slideDown" />
+		<input type="button" name="" id="" value="slideUp" />
+		<input type="button" name="" id="" value="slideToggle" />
+		<br />
+		<div class="box">马天宇简介</div>
+		<div class="box1">
+			<div class="imgs">
+				<img src="img/8.jpg" />
+			</div>
+
+			<p>马天宇（1986年7月12日－），出生于山东省德州武城县，2009年毕业于北京电影学院，现为影视歌三栖艺人。</p>
+			<p>2006年，通过“莱卡加油！好男儿”出道，唱红了《该死的温柔》、《依然在一起》等多首歌曲。2007年， 发行第一张唱片《宇光十色》并获得亚太音乐榜唱片中国大陆地区销量冠军。其主打歌《该死的温柔》 下载量逾1500万次的成绩。2008年，发行第二张唱片《飞》，获得七彩颁奖典礼 “内地最佳男歌手” ， 主打歌《青衣》凭借一人饰四角从而获得 “最佳音乐录影带”，《依然在一起》获得“十大金曲”奖。2013年， 主演喜剧电影《百万爱情宝贝》，凭借该片获得第四届乐视盛典“年度电影最具潜力男演员奖”。2014，
+				主演古装推理悬疑剧《少年神探狄仁杰》、仙侠魔幻偶像剧《古剑奇谭》。2015年，主演喜剧电影《万万没想到》。 2016年，主演古装玄幻剧《幻城》。 2017年1月，主演现代情感剧《凉生，我们可不可以不忧伤》杀青； 3月，主演电影《英雄本色4》；5月，主演三国题材权谋古装剧《三国机密》；7月，主演现代青春偶像剧《悲伤逆流成河》 。 2018年1月18日，其参演的警匪题材电影《英雄本色2018》在中国大陆上映。2018年9月17日， 主演的电视剧《凉生，我们可不可以不忧伤》在湖南卫视播出。2019年，出演电视剧《你好，安怡》。
+			</p>
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("input:first").click(function() {
+			$(".box1").slideDown(3000);
+		})
+		$("input").eq(1).click(function() {
+			$(".box1").slideUp(3000);
+		})
+
+		$("input").eq(2).click(function() {
+			$(".box1").slideToggle(3000);
+		})
+	</script>
+
+</html>

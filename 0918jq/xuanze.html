@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 300px;
+				height: 400px;
+				background-color: aquamarine;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="text" name="allText" id="allText" value="" />
+		<div class="box">
+			<p>
+				<label>
+					<input type="checkbox" name="" class="qx" value="全选" />全选
+				</label>
+			</p>
+			<label>
+				<input type="checkbox" name="" class="hb" value="篮球" />篮球
+			</label>
+			<label>
+				<input type="checkbox" name="" class="hb"  value="乒乓球" />乒乓球		
+			</label>
+			<label>
+				<input type="checkbox" name="" class="hb"  value="排球" />排球	
+			</label>
+			<label>
+				<input type="checkbox" name="" class="hb"  value="橄榄球" />橄榄球	
+			</label>
+
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#allText").focus(function() {
+			$(".box").show();
+		})
+		var allHb = [];
+		$(".hb").click(function() {
+			var v = $(this).val();
+			if ($(this)[0].checked) {
+				if (isContain(v) == false) {
+					allHb.push(v);
+				}
+				console.log(allHb)
+			}else{
+				var index = isContain(v);
+				allHb.splice(index, 1);
+				console.log(allHb);
+			}
+			
+			$("#allText").val(allHb);
+		})
+		
+
+		function isContain(v) {
+			for (var i = 0; i < allHb.length; i++) {
+				if (allHb[i] == v) {
+					return i;
+				}
+			}
+			return false
+		}
+		
+		$(".qx").click(function(){
+			if(this.checked){
+				allHb = [];
+				$.each($(".hb"), function() {
+					this.checked = true;
+					allHb.push(this.value)
+					
+				});
+				$("#allText").val(allHb);
+			}else{
+				$.each($(".hb"), function() {
+					this.checked = false;					
+				});
+				$("#allText").val("");
+			}
+		})
+		
+	</script>
+
+</html>

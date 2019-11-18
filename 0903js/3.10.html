@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a = 0; 
+        var p = 0; 
+        var t = 0; 
+ 
+        for(a = 0; a <= 66; a++)
+        {
+        	for(p = 0; p <= 100; p++)
+            {
+            	for(t = 0; t <= 100; t++)
+                {
+                	if((a * 3 + p * 2 + t == 200) && (a + p + t) == 100)
+                    {
+                    	console.log(a, p, t);
+                    }
+                }
+            }
+        }
+	</script>
+</html>

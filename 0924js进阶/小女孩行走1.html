@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 100px;
+				height: 90px;
+				/*border: 1px solid saddlebrown;*/
+				margin-left: 50px;
+				margin-top: 100px;
+				position: absolute;
+				background-image: url(img/girl.png);
+				background-position-x: 8px;
+				background-position-y: -232px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div class="box">
+
+		</div>-->
+	</body>
+	<script type="text/javascript">
+		//	
+		//		function girl() {
+		//			var box = document.createElement("div");
+		//			box.className = "box";
+		//			document.body.appendChild(box);
+		//			var x = 0;
+		//			setInterval(move, 100);
+		//
+		//			function move() {
+		//				x++;
+		//				box.style.left = 4 * x + "px";
+		//				box.style.backgroundPositionX = -79 * x + "px";
+		//			}
+		//		}
+		//		girl();
+		//		setInterval(function() {
+		//			girl();
+		//		}, 4000)
+
+		function Girl(top) {
+			this.top = top;
+			this.x = 0;
+			this.init = function() {
+				this.box = document.createElement("div");
+				this.box.className = "box";
+				this.box.style.top = this.top + "px";
+				document.body.appendChild(this.box);
+			}
+			this.move = function() {
+				this.x++;
+				this.box.style.left = 4 * this.x + "px";
+				this.box.style.backgroundPositionX = -79 * this.x + "px";
+				this.die();
+			}
+			this.die = function() {
+				if (this.x * 4 > 1000) {
+					document.body.removeChild(this.box);
+					clearInterval(this.timer);
+				}
+			}
+			this.init();
+			var that = this;
+			this.timer = setInterval(function() {
+				that.move();
+			}, 100)
+		}
+		setInterval(function() {
+			new Girl(500 * Math.random())
+		}, 2000)
+	</script>
+
+</html>

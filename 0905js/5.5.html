@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		function rightchange(char, n) {
+			var arr = char.split(" ");
+			n = n % arr.length; //取余
+			for (var i = 1; i <= n; i++) {
+				arr.unshift(arr.pop());
+			}
+			console.log(arr.join(""));
+		}
+		rightchange("abcdefg", 2);
+	</script>
+
+</html>
+function rightchange(str, n) {
+	var start=str.length-n;
+	
+	var str1=str.substr(start,n);
+	var str2=str.substring(0,start);
+	var newStr=str1+str2;
+	return newStr;
+}
+
+	
+		console.log(rightchange("abcdefg", 2));

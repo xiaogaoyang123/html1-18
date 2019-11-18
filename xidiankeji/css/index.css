@@ -1,0 +1,123 @@
+.navbar{
+    background-color:rgb(65, 177,103);
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+.navbar-brand {
+    height: 80px;
+}
+.navbar-nav>li>a{
+    font-size: 18px;
+    color: white !important;
+    line-height: 50px;
+}
+.navbar-nav>li:hover{
+    background-color: green;
+}
+.navbar-toggle{
+    margin-top: 25px;
+}
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+}
+.hot_course{
+    margin-top: 50px;
+}
+@media (min-width: 1200px) {
+    .col-zdlg-2-5 {
+        float: left;
+        width: 20%;
+    }
+}
+.teachers{
+    background-color: rgb(216,246,236);
+    margin: 20px 0;
+    padding: 50px 0;
+}
+@media (max-width: 1200px) {
+    .col-zdlg-2-5 img{
+        width: 177px;
+        height: 197.97px;
+    }
+}
+.sz{
+    position: relative;
+    overflow: hidden;
+}
+.js{
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    color: white !important;
+    top: 0px;
+    height: 100%;
+    left: 100%;
+}
+@media(min-width:1200px){
+    .teacher-item{
+        float: left;
+        width: 20%;
+    }
+}
+.return-top{
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.xyjs{
+    font-size: 18px;
+    
+}
+.xy{
+    transition: all .3s;
+}
+.xy:hover{
+    border-color: #333;
+    box-shadow: 0 10px 20px #333;
+    transform: translateY(-10px)
+    
+}
+.jianjie p{
+    font-size: 18px;
+    color: #333;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: justify;
+    /* text-align-last: justify; */
+}
+.qiye{
+    width: 156px;
+    height: 58px;
+    border: 1px solid #bfbfbf;
+    margin-right: 10px;
+    margin-bottom: 12px;
+}
+.qiye img{
+    transform: translateY(5px)
+}
+@media(min-width:1200px){
+    .col-lg-qiye7{
+        float: left;
+        width: 14.2857%;
+    }
+}
+.footer{
+    background-color: rgb(75, 79,82);
+    color: whitesmoke;
+    line-height: 60px;
+    margin-top: 50px;
+}
+.footer a{
+    color: whitesmoke;
+}
+.thumbnail{
+	padding: 0;
+}
+.xy img{
+	height: 180px;
+}

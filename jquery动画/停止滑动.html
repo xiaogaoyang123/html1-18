@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			input {
+				margin: 10px;
+			}
+			
+			.box,
+			.box0 {
+				width: 1000px;
+				height: 30px;
+				background-color: #D8BFD8;
+				margin: 10px;
+				color: white;
+				text-align: center;
+				line-height: 30px;
+			}
+			
+			.box1,
+			.box2 {
+				width: 1000px;
+				height: 580px;
+				background-color: lavenderblush;
+				margin: 10px;
+				margin-top: -10px;
+				display: none;
+			}
+			
+			.imgs {
+				width: 350px;
+				height: 560px;
+				margin: 10px;
+				float: left;
+			}
+			
+			.imgs img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			p {
+				line-height: 36px;
+				text-indent: 36px;
+				color: darkslateblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="button" name="" id="" value="stop()" />
+		<input type="button" name="" id="" value="stop(true)" />
+		<input type="button" name="" id="" value="stop(true,true)" />
+		<input type="button" name="" id="" value="stop(false,true)" />
+		<br />
+		<div class="box">演艺经历</div>
+		<div class="box1">
+			<div class="imgs">
+				<img src="img/9.jpg" />
+			</div>
+
+			<p>2006年经朋友鼓励他参加了东方卫视的“加油，好男儿”演艺选秀比赛，获得武汉赛区冠军、全国7强、全国网络人气冠军出道，12月考入了北京电影学院，[1]并主演了电影《异度公寓》并取得不错的票房成绩。同年年底发行首本个人写真集《宇你在一起》。</p>
+			<p>2007年发行第一张唱片《宇光十色》，其主打歌《该死的温柔》更是获得了近1500万次的下载量，同年登上CCTV中秋晚会舞台，并演唱歌曲《该死的温柔》。</p>
+			<p>2008年再度登上CCTV中秋晚会他与许慧欣合唱《潜海姑娘》，2月发行第二张唱片《飞》并获得“推荐唱片”奖，[2]6月拍摄了《青衣》mv，马天宇一人饰四角，分别是青衣、老生、现代歌手、民国少年。专辑中的歌曲《眨眼》获中国歌曲排行榜周冠军，并获中歌榜季度金曲，主打歌《依然在一起》连续数周蝉联中国歌曲联播榜冠军。《青衣》在中国TOP排行榜新歌上榜便进入前三名，在亚太音乐榜、音乐先锋榜等榜单都曾位于前三甲[3]。同年并发行第二本个人写真集《依然在一起》。</p>
+		    <p>2008年移动公司总计举办了百场移动歌友会，其中马天宇移动歌友会占25场。湖北移动公司更将“马天宇黄冈歌友会”作成教材供湖北各地市移动公司学习。12月马天宇入选CCTV-4《中华情》节目推出“纪念改革开放30年特别节目”—《岁月如歌》“偶像篇”，他是唯一一位选秀出身的歌手。</p>
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	
+		$(".box").click(function() {
+			$(".box1").slideDown(3000);
+		});
+		$("input").eq(0).click(function() {
+			$(".box1").stop();
+		})
+
+        $(".box").click(function() {
+			$(".box1").slideUp(3000);
+		});
+		$("input").eq(1).click(function() {
+			$(".box1").stop(true);
+		})
+		
+		$(".box").click(function() {
+			$(".box1").slideDown(3000);
+		});
+		$("input").eq(2).click(function() {
+			$(".box1").stop(true,true);
+		})
+		
+		$(".box").click(function() {
+			$(".box1").slideUp(3000);
+		});
+		$("input").eq(3).click(function() {
+			$(".box1").stop(false,true);
+		})
+	</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 200px;
+				height: 200px;
+				background-color: chocolate;
+				margin: 20px 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box= document.getElementsByTagName("div")[0];
+		var styles=getComputedStyle(box);
+		console.log(styles);
+		var bgc=styles["background-color"];
+		console.log(bgc);
+		var w=box.currentStyle.width;
+		var m1=box.currentStyle.marginLeft;
+		console.log(m1)
+	</script>
+
+</html>

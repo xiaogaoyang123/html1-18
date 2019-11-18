@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI 拖动（Draggable） - 默认功能</title>
+		<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+		<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="jqueryui/style.css">
+		<style>
+			.box {
+				width: 200px;
+				height: 150px;
+				/*padding: 0.5em;*/
+				background-image: url(img/1.jpg);
+				background-size: 200px 150px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="box">
+			<p>请拖动我！</p>
+		</div>
+
+	</body>
+	<script>
+//		$(function() {
+			$(".box").draggable();
+//		});
+	</script>
+
+</html>

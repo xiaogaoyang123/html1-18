@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		function yueshu(n) {
+			var sum = 0;
+			for (var i = 1; i <= n / 2; i++) {
+				if (n % i == 0) {
+					sum += i;
+				}
+			}
+			return sum;
+		}
+
+		for (var a = 2; a <= 3000; a++) {
+			b = yueshu(a);
+			if (yueshu(b) == a && a < b) {
+				console.log(a + "与" + b);
+			}
+		}
+	</script>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.contanier {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*设置默认的位置0~4*/
+			}
+			
+			.page {
+				width: 100%;
+				height: 100%;
+				background-color: deeppink;
+			}
+			
+			.page0 {
+				background-color: blue;
+			}
+			
+			.page1 {
+				background-color: green;
+			}
+			
+			.page2 {
+				background-color: darkcyan;
+			}
+			
+			.page3 {
+				background-color: saddlebrown;
+			}
+			
+			.page4 {
+				background-color: slateblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="contanier">
+			<div class="page page0">
+				<h1>0</h1></div>
+			<div class="page page1">
+				<h1>1</h1></div>
+			<div class="page page2">
+				<h1>2</h1></div>
+			<div class="page page3">
+				<h1>3</h1></div>
+			<div class="page page4">
+				<h1>4</h1></div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var contanier = document.querySelector(".contanier");
+		var index = 0;
+		document.onmousewheel = function(event) {
+			var i = event.deltaY > 0 ? 1 : -1; //三目运算法，大于取1，小于取-1
+			index += i;
+			if (index < 0) {
+				index = 0;
+			}
+			if (index > 4) {
+				index = 4;
+			}
+			contanier.style.top = -index * 100 + "%";
+		}
+	</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.ajax({
+			type: "get",
+			url: "top.json",
+			success:function(data){
+				console.log(data)
+			}
+		});
+	</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 1200px;
+				height: 50px;
+				/*background-color: magenta;*/
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input id="but1" type="button" onclick="zd()" value="字号增大" />
+		<input id="but2" type="button" onclick="jx()" value="字号减小" />;
+		<p id="p01" style="font-size: 14px;">明天会更好明天会更好明天会更好明天会更好明天会更好</p>
+		
+	</body>
+	<script type="text/javascript">
+		var p2=document.getElementById("p01");
+		
+		var but3=document.getElementById("but1");
+		var but4=document.getElementById("but2");
+		var num=14;
+		but3.onclick=function zd(){
+			num++;
+			p2.style.fontSize=num+'px';
+			
+		}
+		but4.onclick=function jx(){
+			num--;
+			p2.style.fontSize=num+'px';
+			
+		}
+
+		
+	</script>
+</html>
+		

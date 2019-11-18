@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+    
+			var str = prompt("请输入一个网址"); 
+			var reg=/^w{3}\.\w+\.\w+$/;    
+			if (reg.test(str)) 
+			{        
+				alert(str.replace(str,"www.ucai.com"));      
+			} else 
+			{        
+				alert("你输入网页格式有误");      
+			}    
+
+	</script>
+
+</html>

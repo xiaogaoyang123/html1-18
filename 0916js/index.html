@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<div class="box">小羔羊</div>
+		<div class="box">小羔羊1</div>
+		<div class="box">小羔羊2</div>
+		<div class="box">小羔羊3</div>
+		<input type="text" name="" id="" value="1" />
+		<input type="text" name="" id="" value="2" />
+		<input type="text" name="" id="" value="3" />
+		<input type="text" name="" id="" value="4" />
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".box").css({
+				"width": "200px",
+				"height": "200px",
+				"backgroundColor": "red",
+				"margin": "10px"
+			})
+		//eq没有时全部移动
+			//		$(".box").eq(3).animate({"margin-left":500},3000,function(){
+			//			alert("结束战斗");
+			//		})
+		console.log($("[type='text']"))
+	</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 300px;
+				height: 300px;
+				background-color: cornflowerblue;
+				margin: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var box = $(".box");
+		//		box.click(function() {
+		//			$(this).css("background-color", "blueviolet")
+		//		})
+
+		//		box.mouseenter(function() {
+		//			$(this).css("background-color", "coral");
+		////			console.log(0)
+		//		})
+		//		box.mouseleave(function() {
+		//			$(this).css("background-color", "cornflowerblue");
+		////			console.log(1)
+		//		})
+
+
+		box.hover(function() {
+			$(this).css("background-color", "coral");
+		}, function() {
+			$(this).css("background-color", "cornflowerblue")
+		})
+	</script>
+
+</html>

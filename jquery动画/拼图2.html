@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 40px;
+				height: 60px;
+				position: absolute;
+				background: url(img/02.jpg);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//通过for循环来创建节点
+			for (var row = 0; row < 20; row++) {
+				for (var col = 0; col < 20; col++) {
+					var $div = $("<div></div>"); //新的节点
+					$div.css({
+						"left": 0,
+						"top": 0,
+						"background-position": -40 * col + "px " + -60 * row + "px"
+					});
+					$("body").append($div);
+				}
+			}
+
+			//each语句进行动画
+			$("div").each(function(i) {
+				$(this).delay(i % 20 * 10 + parseInt(i / 20) * 10).animate({
+					"left": i % 20 * 40,
+					"top": parseInt(i / 20) * 60
+				}, 400)
+			})
+		</script>
+	</body>
+
+</html>

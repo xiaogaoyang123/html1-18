@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		var x = 10;
+		var tm = setInterval(function() {
+			x--;
+			console.log(x);
+			if (x == 0) {
+				clearInterval(tm);
+			}
+		}, 1000)
+	</script>
+
+</html>

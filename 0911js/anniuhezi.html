@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background-color: indianred;
+				position: absolute;
+				left: 10px;
+				top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="开始" />
+		<input type="button" name="" id="" value="暂停" />
+		<div class="box">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn=document.querySelectorAll("input");
+		var box=document.querySelector(".box");
+		var x=10;
+		var timer;
+		btn[0].onclick=function(){
+			timer=setInterval(function(){
+				x++;
+				box.style.left=x+"px";
+			},10)
+		}
+		btn[1].onclick=function(){
+			clearInterval(timer);
+		}
+	</script>
+</html>

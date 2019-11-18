@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/logo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/dibu.css" />
+		<link rel="stylesheet" type="text/css" href="../css/lingquanbangdan.css" />
+		<link rel="stylesheet" type="text/css" href="../css/jquery.page.css" />
+		<link rel="stylesheet" type="text/css" href="../css/daohang.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.wai {
+				width: 100%;
+				background-color: white;
+			}
+			
+			li {
+				overflow: hidden;
+			}
+			
+			.goods {
+				width: 1200px;
+				margin: 0 auto;
+				background-color: white;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wai">
+			<div class="li">
+				<!--导航-->
+				<nav class="nav0">
+					<ul></ul>
+				</nav>
+
+				<div class="ll" style="padding-top: 1px;">
+					<!--顶部-->
+					<div class="logo">
+						<div class="neirong1">
+							<div class="xlogo">
+								<img src="../img/1.gif" />
+							</div>
+							<div class="shuru">
+								<input type="search" name="" id="chazhao" value="输入标题或者关键字" />
+								<p class="sousuo">搜索优惠券</p>
+							</div>
+							<div class="kanjia">
+								<img src="../img/2.png" />
+							</div>
+						</div>
+					</div>
+					<!--导航-->
+					<div id="box">
+						<ul>
+							<li>
+								<a href="../index.html">首页</a>
+							</li>
+							<li>
+								<a href="haohuojingxuan.html">好货精选</a>
+							</li>
+							<li class="shouye">
+								<a href="lingquanbangdan.html">领券榜单</a>
+							</li>
+							<li>
+								<a href="baoyou.html">9.9包邮</a>
+							</li>
+							<li>
+								<a href="fengqiangbang.html">疯抢榜</a>
+							</li>
+							<li>
+								<a href="dongdongqiang.html">咚咚抢</a>
+							</li>
+							
+						</ul>
+					</div>
+
+					<!--商品-->
+					<div class="goods">
+						<div class="haohuojingxuan"></div>
+					</div>
+					<div class="fenye">
+						<div id="page"></div>
+					</div>
+					<!--底部-->
+					<div class="dibudaohang">
+						<div class="db1">
+							<p class="b1">网站导航</p>
+							<p class="b2">
+								<a href="#">首页</a>
+							</p>
+							<p class="b3">
+								<a href="#">好货精选</a>
+							</p>
+							<p class="b4">
+								<a href="#">疯抢榜</a>
+							</p>
+							<p class="b5">
+								<a href="#">咚咚抢</a>
+							</p>
+							<p class="b6">
+								<a href="#">9.9包邮</a>
+							</p>
+						</div>
+						<p class="b7">券买买是一家中立的导购网站，网站中的商品信息均来自于互联网。如商品信息不同，可能是商品信息未及时更新，所有商品信息请以天猫/淘宝店铺内为准。</p>
+						<p class="b8">版权所有 本站内容未经书面许可,禁止一切形式的转载 版权所有:姑苏区文燕商务信息咨询服务部</p>
+						<p class="b9">粉丝福利购官网 粉丝福利购怎么赚钱 优惠券怎么设置 粉丝福利购优惠券怎么领 粉丝福利购怎么设置</p>
+					</div>
+				</div>
+				<!--底部-->
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.page.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/navAndfooter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/qianhuan.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function getGoods(types, num) {
+			$.ajax({
+				type: "get",
+				url: "http://127.0.0.1/w/website/findGoodsList",
+				async: true,
+				data: {
+					"info": types,
+					"pageNo": num
+				},
+				success: function(res) {
+					var shuju = res.data.tbk_dg_material_optional_response.result_list.map_data;
+					console.log(shuju)
+					var str = "";
+					$.each(shuju, function(index, item) {
+
+						if(item.coupon_amount == undefined) {
+							item.coupon_amount = 0;
+							item.coupon_share_url = "";
+						}
+						str += `
+								<div class="item">
+									<a href="${item.item_url}">
+									<div class="item0">
+										<img src="${item.pict_url}"/>
+									</div>
+									
+									<p class="biaoti">${item.short_title}</p>
+									<p class="xian">到手价￥<span>${item.zk_final_price}</span></p>
+									<p class="yuanjia">￥<span>${item.reserve_price}</span></p>
+									
+									</a>
+										
+									<a href="${item.coupon_share_url}"
+									    <div class="item2">									       
+									        <p class="quan">券</p>
+									        <p class="yuan">${item.coupon_amount}元</p>									        
+									        <p class="quan1">马上领取</p>									        
+									    </div>
+									</a>
+										
+
+									
+								
+								</div>
+						`;
+						$(".haohuojingxuan").html(str);
+					});
+				}
+			});
+		}
+
+		getGoods("领券榜单", 1)
+
+		fenye("领券榜单")
+	</script>
+
+</html>

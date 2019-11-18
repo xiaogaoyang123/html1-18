@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+	</body>
+	<script type="text/javascript">
+		//		function People(name, age, sex) {
+		//			this.name = name;
+		//			this.age = age;
+		//			this.sex = sex;
+		//		}
+		//
+		//		People.prototype.sayHello = function() {
+		//			alert("|你好啊，我是人类" + this.name);
+		//		}
+		//
+		//		function Student(name, age, sex, xuehao, xiaohonghua) {
+		//			this.name = name;
+		//			this.age = age;
+		//			this.sex = sex;
+		//			this.xuehao = xuehao;
+		//			this.xiaohonghua = xiaohonghua;
+		//		}
+		//
+		//		Student.prototype = new People();
+		//
+		//		{
+		//			alert("好好学习");
+		//		}
+		//		Student.prototype.sayHello = function() {
+		//			alert("哈哈哈我是学生" + this.name);
+		//		}
+		//		var xiaoming = new Student("小明", 10, "男", 112336645454, "10朵");
+		//		var dawei = new People("大卫", 80, "男")
+		//			//		xiaoming.sayHello();
+		//			//		xiaoming.study();
+		//			//		console.log(xiaoming)
+		//			//		dawei.sayHello();
+		//
+		//		console.log(xiaoming.__proto__)
+		//		console.log(People.prototype)
+
+		function People(name, age, sex) {
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+		}
+		People.prototype.sayHello = function() {
+			alert("你好我是人" + this.name);
+		}
+		People.prototype.chifan = function() {
+			alert("我吃饭了！mia mia");
+		}
+
+		function Student(name, age, sex, xuehao, xiaohonghuageshu) {
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.xuehao = xuehao;
+			this.xiaohonghuageshu = xiaohonghuageshu;
+		}
+		//核心语句，继承的实现全靠这条语句了：
+		Student.prototype = new People();
+
+		Student.prototype.sayHello = function() {
+			alert("你好我是小学生，我的学号是" + this.xuehao);
+		}
+		Student.prototype.study = function() {
+			alert("好好学习，天天向上");
+		}
+		Student.prototype.lol = function() {
+			alert("玩儿英雄联盟啊！");
+		}
+
+		var xiaohong = new Student("小红", 11, "女", 20160001, 4);
+		//xiaohong.lol();
+		//xiaohong.chifan();
+		xiaohong.sayHello();
+	</script>
+
+</html>

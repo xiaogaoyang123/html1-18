@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>小小钟表，专为钟表而生</title>
+		<meta name="Keywords" content="小小钟表，专为钟表而生" />
+		<meta name="Description" content="小小钟表，专为钟表而生" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.header {
+				width: 100%;
+				height: 800px;
+				background-color: lightgreen;
+				background-image: url(imgs/1.png);
+				background-size: cover;
+				background-position: center;
+				overflow: hidden;
+			}
+			
+			.logo {
+				width: 104px;
+				height: 53px;
+				margin: 27px auto;
+				/*background-color: navajowhite;*/
+			}
+			
+			.header .logo p {
+				font-size: 30px;
+				font-family: "黑体";
+				color: #FFDC92;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: -20px;
+				margin-left: -550px;
+			}
+			
+			.nav {
+				width: 1200px;
+				border-top: 1px solid #FFDC92;
+				padding-top: 20px;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 60px;
+			}
+			
+			.nav1 {
+				width: 1200px;
+				height: 100px;
+				/*background-color: #90EE90;*/
+				padding-top: 20px;
+				/*margin-top: 36px;*/
+				margin: 0 auto;
+			}
+			
+			.guanyu a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.guanyu a:hover {
+				color: #FFDC92;
+			}
+			
+			.chanpin {
+				width: 100px;
+				height: 50px;
+				/*background-color: red;*/
+				color: #87878B;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+				list-style: none;
+			}
+			
+			.chanpin a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.chanpin:hover {
+				background-color: none;
+			}
+			
+			.chanpin a:hover {
+				color: #FFDC92;
+			}
+			
+			.pin {
+				width: 100px;
+				height: 50px;
+				margin-left: 10px;
+				/*background-color: red;*/
+				display: none;
+			}
+			
+			.pin:hover {
+				color: #FFDC92;
+			}
+			
+			.chanpin:hover .pin {
+				display: block;
+			}
+			
+			.xinwen a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.xinwen a:hover {
+				color: #FFDC92;
+			}
+			
+			.zhaona a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.zhaona a:hover {
+				color: #FFDC92;
+			}
+			
+			.lianxi a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.lianxi a:hover {
+				color: #FFDC92;
+			}
+			
+			.nav1 li {
+				width: 175px;
+				height: 36px;
+				line-height: 36px;
+				float: left;
+				list-style: none;
+				text-align: center;
+				font-size: 18px;
+				color: #87878B;
+			}
+			
+			li.shouye {
+				color: #ffdc92;
+			}
+			
+			.nav1 .xlogo {
+				width: 150px;
+			}
+			
+			.nav1 li.shouye,
+			li.guanyu,
+			li.chanpin {
+				text-align: left;
+			}
+			
+			.nav1 li.xinwen,
+			li.zhaona,
+			li.lianxi {
+				text-align: right;
+			}
+			
+			.header .jingzhun {
+				width: 1200px;
+				/*height: 200px;*/
+				/*background-color: cornsilk;*/
+				color: #FFDC92;
+				font-size: 72px;
+				font-family: 黑体;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 63px;
+			}
+			
+			.header p {
+				width: 1200px;
+				height: 100px;
+				/*background-color: gold;*/
+				color: #FFDC92;
+				font-size: 18px;
+				font-family: arial;
+				text-align: center;
+				margin: 0 auto;
+				padding-top: 30px;
+				padding-bottom: 25px;
+			}
+			
+			.header .jixiebiao {
+				text-align: center;
+				margin-top: -60px;
+			}
+			
+			.rementuijian {
+				height: 800px;
+				width: 100%;
+				background-color: black;
+				overflow: hidden;
+			}
+			
+			.remen {
+				width: 400px;
+				/*height: 300px;*/
+				/*background-color: black;*/
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 70px;
+				margin-bottom: 93px;
+				overflow: hidden;
+			}
+			
+			.remen p {
+				color: #FFDC92;
+				font-size: 18px;
+				font-family: 黑体;
+				margin-top: 27px;
+				margin-bottom: 15px;
+			}
+			
+			.rementuijian .goods {
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			
+			.goods .item {
+				float: left;
+				margin-left: 8px;
+				width: 390px;
+				height: 400px;
+				background-color: #313131;
+				text-align: center;
+			}
+			
+			.goods .item p {
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #cbcccc;
+				margin-top: 40px;
+				margin-bottom: 56px;
+			}
+			
+			.goods .item:hover {
+				background-color: none;
+				width: 392px;
+				height: 402px;
+			}
+			
+			.guanyuwomen .bg {
+				width: 100%;
+				margin: auto;
+			}
+			
+			.guanyuwomen {
+				height: 900px;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.guanyuwomen .guanyuwo {
+				width: 1200px;
+				height: 600px;
+				/*border: 2px solid red;*/
+				font-size: 16px;
+				color: #FFDC92;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				margin-top: 240px;
+			}
+			
+			.guanyuwomen .guanyuwo p:nth-of-type(1) {
+				margin-top: 20px;
+				margin-bottom: 40px;
+			}
+			
+			.guanyuwomen .guanyuwo p:nth-child(2) {
+				margin-top: 10px;
+				margin-bottom: 20px;
+			}
+			
+			.guanyuwomen .guanyuwo p:nth-child(3) {
+				margin-top: 10px;
+				margin-bottom: 20px;
+			}
+			
+			.guanyuwomen .guanyuwo p:nth-child(4) {
+				margin-top: 10px;
+				margin-bottom: 40px;
+			}
+			
+			.youshi {
+				width: 100%;
+				background-color: black;
+				overflow: hidden;
+				margin-top: -124px;
+			}
+			
+			.youshi_content {
+				width: 1200px;
+				height: 100px;
+				/*		background-color: cornflowerblue;*/
+				margin: 0 auto;
+			}
+			
+			.youshi_content .item,
+			.item_item2,
+			.item_item3,
+			.item_item4 {
+				width: 280px;
+				height: 80px;
+				/*background-color: darkgrey;*/
+				overflow: hidden;
+			}
+			
+			.youshi_content .item_left {
+				margin-top: 10px;
+				/*background-color: aquamarine;*/
+				float: left;
+			}
+			
+			.youshi_content .item_right {
+				float: right;
+				width: 200px;
+				height: 60px;
+				/*background-color: greenyellow;*/
+				font-size: 14px;
+				color: #CBCCCC;
+			}
+			
+			.youshi_content .item_right p {
+				margin-top: 5px;
+				width: 180px;
+				height: 60px;
+				/*background-color: darkblue;*/
+			}
+			
+			.youshi_content .item,
+			.item_item2,
+			.item_item3,
+			.item_item4 {
+				float: left;
+			}
+			
+			.youshi_content .item,
+			.item_item2,
+			.item_item3 {
+				border-right: 1px solid #ffdc92;
+				margin-left: 10px;
+				margin-right: 15px;
+			}
+			
+			.zixun {
+				width: 100%;
+				background-color: black;
+				overflow: hidden;
+			}
+			
+			.zixun_content {
+				width: 1200px;
+				height: 374px;
+				background-image: url(imgs/矩形9.png);
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			.zixun_content .news {
+				width: 400px;
+				height: 374px;
+				/*background-color: lawngreen;*/
+				float: left;
+			}
+			
+			.zixun .zixun_content .news img {
+				width: 128px;
+				height: 29px;
+				/*background-color: fuchsia;*/
+				margin-top: 72px;
+				margin-left: -115px;
+			}
+			
+			.zixun .zixun_content .news .p1 {
+				font-size: 18px;
+				font-family: "微软雅黑";
+				color: #CBCCCC;
+				width: 90px;
+				text-align: left;
+				height: 20px;
+				/*background-color: navy;*/
+				margin-top: 34px;
+				margin-left: 77px;
+			}
+			
+			.zixun .zixun_content .news .p2 {
+				font-size: 14px;
+				font-family: "微软雅黑";
+				color: #CBCCCC;
+				width: 316px;
+				text-align: left;
+				height: 110px;
+				/*background-color: firebrick;*/
+				margin-top: 27px;
+				margin-left: 76px;
+				line-height: 20px;
+				border-bottom: 1px solid #CBCCCC;
+			}
+			
+			.zixun .zixun_content .news .p3 {
+				font-size: 18px;
+				font-family: "微软雅黑";
+				color: #CBCCCC;
+				width: 324px;
+				height: 20px;
+				text-align: left;
+				/*background-color: navy;*/
+				margin-top: 34px;
+				margin-left: 76px;
+			}
+			
+			.zixun .zixun_content .news .p4 {
+				font-size: 14px;
+				font-family: "微软雅黑";
+				color: #CBCCCC;
+				width: 325px;
+				height: 110px;
+				/*background-color: firebrick;*/
+				margin-top: 27px;
+				margin-left: 77px;
+				line-height: 20px;
+				text-align: left;
+				border-bottom: 1px solid #CBCCCC;
+			}
+			
+			.zixun .zixun_content .news .tp {
+				width: 287px;
+				height: 231px;
+				/*background-color: fuchsia;*/
+				margin-top: 66px;
+				margin-left: 32px;
+			}
+			
+			.lianxiw {
+				width: 100%;
+				background-color: black;
+				overflow: hidden;
+			}
+			
+			.lianxiw .women {
+				width: 1200px;
+				height: 396px;
+				/*background-color: aquamarine;*/
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			.lianxiw .women .dt {
+				width: 831px;
+				height: 396px;
+				float: left;
+			}
+			
+			.lianxiw .women .fangshi p {
+				line-height: 40px;
+				color: #CBCCCC;
+				font-size: 14px;
+				margin-top: 40px;
+				margin-bottom: 56px;
+				text-align: left;
+				padding-left: 60px;
+				padding-top: 60px;
+			}
+			
+			.lianxiw .women .fangshi {
+				float: left;
+				width: 369px;
+				height: 396px;
+				background-color: #313131;
+				text-align: center;
+			}
+			
+			.bottom {
+				width: 100%;
+				background-color: black;
+				overflow: hidden;
+				height: 295px;
+			}
+			
+			.bottom_content {
+				width: 1200px;
+				height: 195px;
+				background-image: url(imgs/矩形9.png);
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 56px;
+			}
+			
+			.bottom .bottom_content .saoma {
+				width: 400px;
+				height: 195px;
+				/*background-color: lightblue;*/
+				float: left;
+			}
+			
+			.bottom .bottom_content .saoma .ma {
+				width: 143px;
+				height: 143px;
+				margin: 10px auto;
+			}
+			
+			.bottom .bottom_content .saoma p {
+				font-size: 12px;
+				color: #CBCCCC;
+				font-family: "微软雅黑";
+				/*background-color: black;*/
+				margin-top: 10px;
+			}
+			
+			.bottom .bottom_content .saoma img {
+				/*background-color: yellow;*/
+				display: block;
+				margin-top: 30px;
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="logo">
+				<img src="imgs/2.png" />
+				<p>WATCH</p>
+			</div>
+			<div class="nav">
+
+			</div>
+
+			<ul class="nav1">
+				<li class="shouye">网站首页</li>
+				<li class="guanyu">
+					<a href="1.html">关于我们</a>
+				</li>
+				<li class="chanpin">
+					<a href="2.html">产品中心</a>
+					<ul>
+						<li class="pin">
+							<a href="2.html">机械表</a></li>
+						<li class="pin">
+							<a href="3.html">表带</a></li>
+					</ul>
+				</li>
+				<li class="xlogo"><img src="imgs/03.png" /></li>
+				<li class="xinwen">
+					<a href="4.html">新闻中心</a></li>
+				<li class="zhaona">
+					<a href="5.html">招纳贤士</a></li>
+				<li class="lianxi">
+					<a href="6.html">联系我们</a></li>
+
+			</ul>
+			<div class="jingzhun">
+				精准典雅&nbsp; 奢华有道
+			</div>
+			<p>
+				ACCURATE ELEGANT LUXURY
+			</p>
+			<div class="jixiebiao">
+				<a href="2.html" target="_blank"><img src="imgs/矢量智能对象2.png" /></a>
+			</div>
+		</div>
+		<!--热门推荐-->
+		<div class="rementuijian">
+			<div class="remen">
+				<img src="imgs/2.png" />
+				<p>
+					———————— 热门推荐 ————————
+				</p>
+				<img src="imgs/矢量智能对象5.png" />
+			</div>
+			<div class="goods">
+				<div class="item">
+					<p>GT - 黑色</p>
+					<a href="7.html" target="_blank"><img src="imgs/4.png" /></a>
+
+				</div>
+				<div class="item">
+					<p>GT - 棕色</p>
+					<a href="7.html" target="_blank"><img src="imgs/5.png" /></a>
+				</div>
+				<div class="item">
+					<p>YT - 黑色</p>
+					<a href="7.html" target="_blank"><img src="imgs/06.png" /></a>
+				</div>
+			</div>
+		</div>
+		<!--关于我们-->
+		<div class="guanyuwomen">
+			<img class="bg" src="imgs/6.png" />
+			<div class="guanyuwo">
+				<p>
+					关于我们<br /> ABOUT US ————
+				</p>
+				<p>
+					小小钟表是一家集生产、销售于一体的钟表礼品有限公司。目前,公司主要生产销售各类<br /> 机械闹钟、石英闹钟、扭摆工艺钟、卡通语言钟打铃钟、贪睡钟、静音扫描钟、和弦彩 <br />灯钟、液晶钟等系列产品。
+				</p>
+				<p>
+					小小钟表拥有一个庞大的生产基地，产品达2000余种。公司自成立以来，引进世界先进<br />的电子钟表生产技术，拥有开发、设计、制造及优良售后服务一条龙的生 产服务网络，<br /> 保证了产品高品位高质量、潮流性和价格的优势。
+				</p>
+				<p>
+					由于品种齐全,质量可靠,服务优良,价格合理,获得了广大客户及用户的信赖，在同行业中<br /> 脱颖而出，并在国内外享有较高声誉。
+				</p>
+				<p>
+					<img src="imgs/矢量智能对象4.png" />
+				</p>
+			</div>
+		</div>
+		<!--我们的优势-->
+		<div class="youshi">
+			<div class="remen">
+				<img src="imgs/2.png" />
+				<p>
+					———————— 我们的优势 ————————
+				</p>
+				<img src="imgs/矢量智能对象5.png" />
+			</div>
+			<div class="youshi_content">
+
+				<div class="item">
+					<img class="item_left" src="imgs/ccbz.png" />
+					<div class="item_right">
+						<img src="imgs/矢量智能对象6.png" />
+						<p>
+							您可以在这里定制您想要的任何手表
+						</p>
+					</div>
+				</div>
+
+				<div class="item_item2">
+					<img class="item_left" src="imgs/l3zv.png" />
+					<div class="item_right">
+						<img src="imgs/矢量智能对象6.png" />
+						<p>
+							专业的,才是较好的,专注制表数十载
+						</p>
+					</div>
+				</div>
+
+				<div class="item_item3">
+					<img class="item_left" src="imgs/sga2.png" />
+					<div class="item_right">
+						<img src="imgs/矢量智能对象8.png" />
+						<p>
+							质量保证,精益求精,表里如一
+						</p>
+					</div>
+				</div>
+
+				<div class="item_item4">
+					<img class="item_left" src="imgs/pybh.png" />
+					<div class="item_right">
+						<img src="imgs/矢量智能对象9.png" />
+						<p>
+							在保证优秀品质的前提下价格公道,较合理
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		</div>
+		<!--新闻资讯-->
+		<div class="zixun">
+			<div class="remen">
+				<img src="imgs/2.png" />
+				<p>
+					———————— 新闻资讯 ————————
+				</p>
+				<img src="imgs/矢量智能对象5.png" />
+			</div>
+			<div class="zixun_content">
+				<div class="news">
+					<img src="imgs/矢量智能对象.png" />
+					<div class="p1">
+						钟表的发展
+					</div>
+					<div class="p2">
+						公元1300年以前，人类主要是利用天文现象和流动物质的连续运动来计时。例如，日晷是利 用日影的方位计时；漏壶和沙漏是利用水流和 沙流的流量计时。东汉张衡制造漏水转浑天仪， 用齿轮系统把浑象和计时漏壶联结起来.....
+					</div>
+				</div>
+
+				<div class="news">
+					<img src="imgs/矢量智能对象.png" />
+					<div class="p3">
+						热烈祝贺小小时钟荣膺中国名牌产品称号
+					</div>
+					<div class="p4">
+						2010 年 9月 1 日 ，小小钟表有限公司获得由国家质 量检验检疫总局颁发的“中国名牌产品”证书。其生 产的小小牌钟表，以特有的简约风格和优良的品质吸 引了亿万消费者的目光，成为国内钟表行业较受欢.....
+					</div>
+				</div>
+				<div class="news">
+					<img class="tp" src="imgs/f4bh.png" />
+				</div>
+			</div>
+		</div>
+		<!--联系我们-->
+		<div class="lianxiw">
+			<div class="remen">
+				<img src="imgs/2.png" />
+				<p>
+					———————— 联系我们 ————————
+				</p>
+				<img src="imgs/矢量智能对象5.png" />
+			</div>
+			<div class="women">
+				<img class="dt" src="imgs/3.png" />
+				<div class="fangshi">
+					<p>
+						座机： 400-000-000 <br />手机： 12345678900 <br />.........................................................<br />邮箱： 123456@163.com <br />地址： 西安市雁塔区1楼2号<br />...........................................................
+					</p>
+
+				</div>
+			</div>
+		</div>
+		<!--底部导航-->
+		<div class="bottom">
+			<div class="bottom_content">
+				<div class="saoma">
+					<img class="ma" src="imgs/14.png" />
+					<p>小小手表微信公众号</p>
+				</div>
+				<div class="saoma">
+					<p>小小手表期待您的光临 &nbsp; &nbsp; &nbsp;.........................................................................................</p>
+					<img src="imgs/矢量智能对象10.png" />
+					<img src="imgs/矢量智能对象11.png" />
+					<img src="imgs/矢量智能对象12.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

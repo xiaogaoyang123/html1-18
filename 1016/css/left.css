@@ -1,0 +1,57 @@
+.content {
+	width: 100%;
+	background-color: #F6F6F6;
+	overflow: hidden;
+}
+
+.neirong3 {
+	width: 1200px;
+	height: 360px;
+	/*background-color: antiquewhite;*/
+	margin: 0 auto;
+}
+
+.left0 {
+	width: 200px;
+	height: 360px;
+	background-color: white;
+	float: left;
+	margin-left: 0;
+	overflow: hidden;
+}
+
+.lunbo {
+	width: 720px;
+	height: 360px;
+	background-color: aqua;
+	float: left;
+}
+
+.right0 {
+	width: 280px;
+	height: 360px;
+	/*background-color: cadetblue;*/
+	float: left;
+	margin-right: 0;
+}
+
+.goodsType {
+	width: 50%;
+	list-style: none;
+	color: #5E5E5E;
+	/*line-height: 10px;*/
+	margin-top: 10px;
+	border-bottom: 1px dashed silver;
+	float: left;
+}
+
+.goodsType:hover {
+	color: #F01A61;
+}
+
+.goodsType img {
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-left: 13px;
+}

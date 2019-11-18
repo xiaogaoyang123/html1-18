@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementsByTagName("div")[0];
+		//      鼠标点击的位置
+		//		box.onclick = function(e){
+		//			var x = e.clientX - this.offsetLeft;
+		//			var y = e.clientY - this.offsetTop;
+		//			console.log(x,y);
+		//		}
+		//		 
+
+		//  event.type 返回事件的类型，没有on， 比如”click”
+		//● event.target 返回你点击的最小的那个元素，即使这个元素身上没有监听，也是返回它
+		//● event.currentTarget	返回自己，this一定和event.currentTarget是一个元素，都是自己
+		//● event.bubbles	返回一个布尔值，表示这个事件是否冒泡
+		box.onclick = function(e) {
+			console.log(e);
+			console.log(e.target);
+			console.log(e.currentTarget);
+			console.log(e.bubbles);
+			console.log(e.type)
+		}
+	</script>
+
+</html>

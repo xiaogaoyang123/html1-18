@@ -1,0 +1,134 @@
+.haohuojingxuan {
+	width: 1200px;
+	/*height: 800px;*/
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.haohuojingxuan .item {
+	width: 230px;
+	height: 335px;
+	overflow: hidden;
+	background-color: white;
+	float: left;
+	border: 1px solid #D5D5D5;
+	margin-left: 6px;
+	margin-top: 10px;
+	transition: all 0.3s;
+}
+
+.haohuojingxuan .item:hover {
+	transform: translateY(-8px);
+}
+
+.haohuojingxuan .item a {
+	color: #666666;
+	text-decoration: none;
+}
+
+.haohuojingxuan .item h5:hover {
+	color: #F01A61;
+}
+
+.haohuojingxuan .item0 {
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.haohuojingxuan .item0 img {
+	width: 100%;
+	height: 100%;
+}
+
+.haohuojingxuan .biaoti {
+	width: 230px;
+	height: 40px;
+	margin-left: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+	line-height: 40px;
+}
+
+.haohuojingxuan .xian {
+	width: 100px;
+	height: 30px;
+	/*background-color: sandybrown;*/
+	color: #FF0100;
+	font-size: 12px;
+	margin-left: 0px;
+	text-align: left;
+	float: left;
+}
+.haohuojingxuan .yuanjia{
+	width: 60px;
+	height: 30px;
+	font-size: 12px;
+	text-decoration: line-through;
+	margin-left: 0px;
+	text-align: left;
+	margin-top: 5px;
+}
+.haohuojingxuan .xian span {
+	font-size: 20px;
+	font-weight: bold;
+}
+.haohuojingxuan .item2 {
+	width: 230px;
+	height: 60px;
+	overflow: hidden;
+	margin-left: 0px;
+	margin-top: 10px;
+}
+.haohuojingxuan .item2 .quan{
+	width: 30px;
+	height: 30px;
+	background-color: red;
+	border-right: 2px dashed white;
+	color: white;
+	line-height: 30px;
+	float: left;
+	margin-top: 8px;
+}
+.haohuojingxuan .item2 .yuan{
+	width: 50px;
+	height: 30px;
+	background-color: red;
+	border-right: 2px dashed white;
+	color: white;
+	line-height: 30px;
+	float: left;
+	margin-top: 8px;
+}
+.haohuojingxuan .item2 .quan1{
+	width: 80px;
+	height: 30px;
+	background-color: red;
+	border-right: 2px dashed white;
+	color: white;
+	line-height: 30px;
+	margin-top: 8px;
+}
+
+.haohuojingxuan .item2 .quan1:hover{
+	color: yellow;
+}
+.haohuojingxuan .item2 p{
+	float: left;
+	color: white;
+	font-size: 14px;
+}
+.item1 p {
+	margin-top: 10px;
+}
+
+
+.haohuojingxuan .item * {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

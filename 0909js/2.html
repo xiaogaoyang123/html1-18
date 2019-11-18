@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="top">
+			888
+		</div>
+		<div class="top">
+			666
+		</div>
+	</body>
+	<script type="text/javascript">
+//		var box=document.getElementById("box");
+//		var box=document.getElementsByTagName("div")[2];
+		var box=document.getElementsByClassName("top")[1];
+//		box.style.width="500px";
+//		box.style.height="100px";
+//		box.style.backgroundColor="greenyellow";
+		box.style.cssText="height: 200px;width: 200px;border: 2px solid grey;"
+	</script>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.neirong5 {
+				width: 1200px;
+				/*height: 800px;*/
+				padding: 0px;
+				margin: 0 auto;
+				/*background-color: navajowhite;*/
+				overflow: hidden;
+			}
+			
+			.shangpin {
+				width: 880px;
+				height: 800px;
+				/*				background-color: firebrick;*/
+				float: left;
+			}
+			
+			.temai {
+				width: 310px;
+				height: 800px;
+				background-color: azure;
+				float: left;
+				margin-left: 10px;
+			}
+			
+			.goodsList {
+				width: 880px;
+				height: 324px;
+				/*background-color: lavender;*/
+				overflow: hidden;
+				margin-top: 0px;
+				padding-top: 2px;
+			}
+			
+			.dongdongqiang {
+				width: 880px;
+				height: 50px;
+				/*background-color: floralwhite;*/
+				overflow: hidden;
+				margin-top: 0px;
+			}
+			
+			.dongdongqiang div {
+				width: 80px;
+				height: 50px;
+				margin-left: 0px;
+				float: left;
+			}
+			
+			.qiang {
+				width: 76px;
+				height: 30px;
+				color: #555555;
+				margin: 0 auto;
+				padding-left: 5px;
+				border-left: 3px solid #F01A61;
+				font-family: "黑体";
+				font-weight: bold;
+				font-size: 24px;
+				margin-top: 10px;
+				margin-left: 10px;
+			}
+			
+			.huanhuan {
+				width: 60px;
+				height: 50px;
+				color: #555555;
+				line-height: 15px;
+				text-align: center;
+				float: left;
+				margin-left: 620px;
+			}
+			
+			.chakan a {
+				width: 118px;
+				height: 50px;
+				color: #555555;
+				line-height: 15px;
+				text-align: center;
+				float: left;
+				margin-right: 0px;
+				text-decoration: none;
+				font-size: 14px;
+			}
+			
+			.huanhuan:hover {
+				color: #F01A61;
+			}
+			
+			.chakan a:hover {
+				color: #F01A61;
+			}
+			
+			.sp0,
+			.sp1{
+				width: 438px;
+				height: 160px;
+				float: left;
+				border: 1px solid silver;
+				overflow: hidden;
+			}
+			.sp2,
+			.sp3 {
+				width: 438px;
+				height: 160px;
+				float: left;
+				border-left: 1px solid silver;
+				border-right: 1px solid silver;
+				border-bottom: 1px solid silver;
+				overflow: hidden;
+			}
+			.sp0,.sp2{
+				border-right: none;
+			}
+			.sp1 .item2 {
+				width: 438px;
+				height: 160px;
+				margin: 5px;
+				padding: 5px;
+				overflow: hidden;
+			}
+			
+			.sp1 .item2 a {
+				color: #666666;
+				text-decoration: none;
+			}
+			
+			.sp1 .item2 h5:hover {
+				color: #F01A61;
+			}
+			
+			.sp1 .item3 {
+				width: 120px;
+				height: 120px;
+				margin-top: 10px;
+				float: left;
+			}
+			
+			.sp1 .item3 img {
+				width: 100%;
+				height: 100%;
+			}
+			.sp1 .item3 img:hover {
+				opacity: 0.5;
+			}
+			.sp1 .item4 {
+				width: 260px;
+				height: 120px;
+				margin-left: 20px;
+				float: left;
+			}
+			.sp1 .item4 .quan2{
+				width: 68px;
+				height: 24px;
+				background-color: #FFF3F3;
+				border: 1px solid #FFC5C7;
+				color: #FF0100;
+				font-size: 14px;
+				text-align: center;
+				line-height: 24px;
+				margin-top: -4px;
+			}
+			.sp1 .item4 .xian2{
+				color: #FF0100;
+			}
+			.sp1 .item4 .yuan2{
+				font-size: 12px;
+				text-decoration: line-through;
+				margin-left: 10px;
+			}
+			.sp1 .item4 .yue2{
+				font-size: 12px;
+				margin-left: 10px;
+				
+			}
+			.sp1 .item2 * {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="neirong5">
+			<div class="shangpin">
+				<div class="dongdongqiang">
+					<div>
+						<p class="qiang">咚咚抢</p>
+					</div>
+
+					<p class="huanhuan">换一换</p>
+					<p class="chakan">
+						<a href="#">查看更多</a>
+					</p>
+				</div>
+				<div class="goodsList">
+					<div class="sp0"></div>
+					<div class="sp1"></div>
+					<div class="sp2"></div>
+					<div class="sp3"></div>
+				</div>
+
+			</div>
+			<div class="temai">
+
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		function getGoods(types, num) {
+			$.ajax({
+				type: "get",
+				url: "http://127.0.0.1/w/website/findGoodsList",
+				async: true,
+				data: {
+					"info": types,
+					"pageNo": num
+				},
+				success: function(res) {
+					var shuju = res.data.tbk_dg_material_optional_response.result_list.map_data;
+					console.log(shuju)
+					$.each(shuju, function(index, item2) {
+						//						
+						str = `
+								<div class="item2">
+									<a href="${item2.item_url}">
+									<div class="item3">
+										<img src="${item2.pict_url}"/></div>
+										<div class="item4">
+										<h5>${item2.short_title}</h5>
+								    <p class="quan2">
+										<span>领劵${item2.coupon_amount}元</span>	
+									</p>
+									<p>
+										<span class="xian2">￥:${item2.zk_final_price-item2.coupon_amount}元</span>										
+										<span class="yuan2">￥:${item2.zk_final_price}元</span>
+										<span class="yue2">月销量:${item2.tk_total_sales}</span>
+									</p>
+									
+									</a>
+									</div>
+								</div>
+						`;
+						$(".sp1").append(str);
+					});
+				}
+			});
+		}
+
+		getGoods("装饰", 1)
+	</script>
+
+</html>

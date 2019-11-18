@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box,
+			.box1,
+			.box2,
+			.box3 {
+				width: 150px;
+				height: 150px;
+				background-color: deepskyblue;
+				margin: 10px;
+				position: absolute;
+			}
+			
+			.box {
+				top: 20px;
+				left: 0;
+			}
+			
+			.box1 {
+				top: 180px;
+				left: 0;
+			}
+			
+			.box2 {
+				top: 340px;
+				left: 0;
+			}
+			
+			.box3 {
+				top: 500px;
+				left: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="button" name="" id="" value="开始" />
+		<div class="box">01</div>
+		<div class="box1">02</div>
+		<div class="box2">03</div>
+		<div class="box3">04</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("input").click(function() {
+			$(".box").animate({
+				"left": 400
+			}, 2000, function() {
+				$(this).css("background-color", "aquamarine")
+			});
+			$(".box1").delay(2000).animate({
+				"left": 550
+			}, 2000, function() {
+				$(this).css("background-color", "aquamarine")
+			});
+			$(".box2").delay(4000).animate({
+				"left": 700
+			}, 2000, function() {
+				$(this).css("background-color", "aquamarine")
+			});
+			$(".box3").delay(6000).animate({
+				"left": 850
+			}, 2000, function() {
+				$(this).css("background-color", "aquamarine")
+			});
+		})
+	</script>
+
+</html>

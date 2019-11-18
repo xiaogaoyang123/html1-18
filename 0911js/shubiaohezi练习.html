@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: #00CED1;
+				border: 2px solid #CD5C5C;
+				position: relative;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box=document.querySelector(".box");
+		
+		box.onmousemove=function(e){
+			var x=e.clientX-this.offsetWidth/2;
+			var y=e.clientY-this.offsetHeight/2;
+			this.style.left=x+"px";
+			this.style.top=y+"px";
+		}
+		box.onmouseover=function(e){
+			console.log(e);
+		}
+	</script>
+</html>

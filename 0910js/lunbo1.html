@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#box {
+				position: relative;
+				width: 500px;
+				height: 300px;
+				margin: 100px auto;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#image {
+				width: 500px;
+				height: 300px;
+				position: relative;
+			}
+			
+			#image li {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+			#image li.image_show {
+				display: block;
+			}
+			
+			#list {
+				position: absolute;
+				bottom: 6px;
+				left: 50%;
+				margin-left: -36px;
+			}
+			
+			#list li {
+				width: 12px;
+				vertical-align: middle;
+				height: 12px;
+				float: left;
+				border-radius: 6px;
+				margin-right: 6px;
+				background-color: #ccc;
+			}
+			
+			#list li.list_show {
+				background: red;
+			}
+			
+			.round li {
+				width: 40px;
+				height: 40px;
+				background-color: #cccccc;
+				border-radius: 20px;
+				line-height: 40px;
+				color: white;
+				font-size: 28px;
+				font-weight: bold;
+				text-align: center;
+			}
+			
+			.round li:hover {
+				background-color: #666;
+				cursor: pointer;
+			}
+			
+			.round_l {
+				float: left;
+				margin-left: 5px;
+			}
+			
+			.round_r {
+				float: right;
+				margin-right: 5px;
+			}
+			
+			.round {
+				width: 500px;
+				position: absolute;
+				top: 50%;
+				margin-top: -20px;
+				display: none;
+			}
+			li img{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul id="image">
+				<li class="image_show"><img src="img/1.jpg" width="500px" height="300px" /></li>
+				<li><img src="img/2.jpg" width="500px" height="300px" /></li>
+				<li><img src="img/3.jpg" width="500px" height="300px" /></li>
+				<li><img src="img/4.jpg" width="500px" height="300px" /></li>
+			</ul>
+			<ul id="list">
+				<li class="list_show"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="round" id="round">
+				<li class="round_l" id="round_l">&lt;</li>
+				<li class="round_r" id="round_r">&gt;</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			/*当鼠标进入盒子，盒子两边的圆形显示效果*/
+			function $(id) {
+				return document.getElementById(id);
+			}
+			$("box").οnmοuseοver = function() {
+				$("round").style.display = "block";
+			}
+			$("box").οnmοuseοut = function() {
+				$("round").style.display = "none";
+			}
+			var image = $("image").getElementsByTagName("li");
+			var list = $("list").getElementsByTagName("li");
+			var round_r = $("round_r");
+			var round_l = $("round_l");
+			for (var i = 0; i < list.length; i++) {
+				list[i].index = i;
+				/*当鼠标放在图片下方小圆点上时图片自动切换*/
+				list[i].onmouseover = function() {
+					for (var j = 0; j < list.length; j++) {
+						list[j].className = "";
+						image[j].className = "";
+					}
+					this.className = "list_show";
+					image[this.index].className = "image_show";
+				}
+			}
+			round_r.onclick = function() {
+				move(false);
+			}
+			round_l.onclick = function() {
+				move(true);
+			}
+
+			function move(boolean) {
+				for (var i = 0; i < list.length; i++) {
+					if (list[i].className == "list_show") {
+						var index = i;
+						break;
+					}
+				}
+				boolean ? (index == 0 ? index = list.length - 1 : index--) : (index == list.length - 1 ? index = 0 : index++);
+				for (var j = 0; j < list.length; j++) {
+					list[j].className = "";
+					image[j].className = "";
+				}
+				list[index].className = "list_show";
+				image[index].className = "image_show";
+			}
+		</script>
+	</body>
+
+</html>

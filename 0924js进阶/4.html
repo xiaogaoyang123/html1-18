@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		//对象的方法
+		var xiaoming = {
+			name: "小明",
+			age: 18,
+			sex: "男",
+			sayHello: function() {
+				alert("你好，我是" + this.name);
+				alert("今年" + this.age + "岁了");
+				alert("我是可爱的小" + this.sex + "生");
+			},
+			zhangda : function(){
+					this.age++;
+				}
+
+		}
+
+		xiaoming.sayHello();
+	</script>
+
+</html>

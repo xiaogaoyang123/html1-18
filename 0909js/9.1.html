@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p {
+				width: 500px;
+				height: 100px;
+				/*background-color: antiquewhite;*/
+				color: aqua;
+				font-size: 60px;
+				margin: 0 auto;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>十天内免登陆</p>
+	</body>
+	<script type="text/javascript">
+		var p1 = document.getElementsByTagName("p")[0];
+		p1.onmouseover = function() {
+			p1.style.border = "2px solid yellow";
+		}
+		p1.onmouseout = function() {
+			p1.style.border = "none";
+		}
+	</script>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul li {
+				width: 100px;
+				height: 50px;
+				background-color: salmon;
+				margin-left: 10px;
+				float: left;
+				list-style: none;
+				text-align: center;
+				line-height: 50px;
+			}
+			/*方法一*/
+			/*ul li:hover{
+				background-color: #008B8B;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		//方法二
+		//		var lis=document.getElementsByTagName("li");
+		//		for (var i=0;i<lis.length;i++) {
+		//			lis[i].onmouseover=function(){
+		//				this.style.backgroundColor="#008B8B";
+		//			}
+		//			lis[i].onmouseout=function(){
+		//				this.style.backgroundColor="salmon";
+		//			}
+		//		}
+		
+		
+		
+		//方法三
+				var lis=document.getElementsByTagName("li");
+				for (var i=0;i<lis.length;i++) 
+				{
+					lis[i].onmouseover=function()
+					{
+						for(var j=0;j<lis.length;j++)
+						{
+							lis[j].style.backgroundColor="salmon";
+						}
+						this.style.backgroundColor="#008B8B";
+					}
+				}
+	</script>
+
+</html>

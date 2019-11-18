@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.header {
+				width: 100%;
+				height: 435px;
+				background-color: lightgreen;
+				background-image: url(imgss/009.jpg);
+				background-size: cover;
+				background-position: center;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.logo {
+				width: 104px;
+				height: 53px;
+				margin: 27px auto;
+				/*background-color: navajowhite;*/
+			}
+			
+			.nav {
+				width: 1200px;
+				border-top: 1px solid #FFDC92;
+				padding-top: 20px;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 62px;
+			}
+			
+			.header .logo p {
+				font-size: 30px;
+				font-family: "黑体";
+				color: #FFDC92;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 10px;
+			}
+			
+			.nav1 {
+				width: 1200px;
+				height: 100px;
+				/*background-color: #90EE90;*/
+				padding-top: 20px;
+				/*margin-top: 36px;*/
+				margin: 0 auto;
+			}
+			
+			.shouye a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.shouye a:hover {
+				color: #FFDC92;
+			}
+			
+			.guanyu a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.guanyu a:hover {
+				color: #FFDC92;
+			}
+			
+			.chanpin {
+				width: 100px;
+				height: 50px;
+				/*background-color: red;*/
+				color: #87878B;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+				list-style: none;
+			}
+			
+			.chanpin a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.chanpin:hover {
+				background-color: none;
+			}
+			
+			.chanpin a:hover {
+				color: #FFDC92;
+			}
+			
+			.pin {
+				width: 100px;
+				height: 50px;
+				margin-left: 10px;
+				/*background-color: red;*/
+				display: none;
+			}
+			
+			.pin:hover {
+				color: #FFDC92;
+			}
+			
+			.chanpin:hover .pin {
+				display: block;
+			}
+			
+			.xinwen a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.xinwen a:hover {
+				color: #FFDC92;
+			}
+			
+			.zhaona a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.zhaona a:hover {
+				color: #FFDC92;
+			}
+			
+			.lianxi a {
+				display: block;
+				width: 100%;
+				color: #87878B;
+				text-decoration: none;
+			}
+			
+			.lianxi a:hover {
+				color: #FFDC92;
+			}
+			
+			.nav1 li {
+				width: 175px;
+				height: 36px;
+				line-height: 36px;
+				float: left;
+				list-style: none;
+				text-align: center;
+				font-size: 18px;
+				color: #87878B;
+			}
+			
+			li.chanpin {
+				color: #ffdc92;
+			}
+			
+			.nav1 .xlogo {
+				width: 150px;
+			}
+			
+			.nav1 li.shouye,
+			li.guanyu,
+			li.chanpin {
+				text-align: left;
+			}
+			
+			.nav1 li.xinwen,
+			li.zhaona,
+			li.lianxi {
+				text-align: right;
+			}
+			
+			.women {
+				width: 100%;
+				background-color: #282828;
+				overflow: hidden;
+				height: 1240px;
+			}
+			
+			.women .daohang {
+				width: 1200px;
+				height: 86px;
+				background-color: #282828;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				right: 0px;
+				top: 0px;
+				margin: 0 auto;
+				margin-top: 390px;
+			}
+			
+			.women .daohang .logo2 {
+				width: 52px;
+				height: 27px;
+				/*background-color: aqua;*/
+				margin-top: 24px;
+				margin-left: 20px;
+				float: left;
+			}
+			
+			.women .daohang img {
+				width: 56px;
+				height: 14px;
+				/*background-color: aqua;*/
+				margin-top: 36px;
+				margin-left: 10px;
+				float: left;
+			}
+			
+			.women .daohang .jiantou {
+				width: 10px;
+				height: 10px;
+				/*background-color: aqua;*/
+				margin-top: 38px;
+				margin-left: 1px;
+				float: left;
+			}
+			
+			.women .daohang .wangzhan {
+				width: 56px;
+				height: 14px;
+				/*background-color: aqua;*/
+				margin-top: 36px;
+				margin-left: 10px;
+				float: left;
+				margin-right: 10px;
+			}
+			
+			.women .daohang .biaodai1 {
+				width: 29px;
+				height: 14px;
+				/*background-color: aqua;*/
+				margin-top: 36px;
+				float: left;
+			}
+			
+			.rementuijian {
+				/*height: 1200px;*/
+				width: 100%;
+				background-color: #191717;
+				overflow: hidden;
+			}
+			
+			.remen {
+				width: 400px;
+				/*height: 300px;*/
+				/*background-color: magenta;*/
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 90px;
+				margin-bottom: 93px;
+				overflow: hidden;
+			}
+			
+			.remen p {
+				color: #FFDC92;
+				font-size: 18px;
+				font-family: 黑体;
+				margin-top: 27px;
+				margin-bottom: 15px;
+			}
+			
+			.rementuijian .goods {
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+				/*background-color: sandybrown;*/
+				margin-top: -36px;
+			}
+			
+			.rementuijian .goods1 {
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+				/*background-color: sandybrown;*/
+			}
+			
+			.rementuijian .goods img {
+				float: left;
+				margin-left: 10px;
+				width: 390px;
+				height: 400px;
+				text-align: center;
+			}
+			
+			.rementuijian .goods1 img {
+				float: left;
+				margin-left: 10px;
+				width: 390px;
+				height: 400px;
+				text-align: center;
+			}
+			
+			.rementuijian .wenzi {
+				width: 1200px;
+				height: 58px;
+				/*background-color: violet;*/
+				margin: 0 auto;
+				text-align: center;
+				overflow: hidden;
+			}
+			
+			.rementuijian .wenzi1 {
+				width: 1200px;
+				height: 58px;
+				/*background-color: violet;*/
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			.rementuijian .wenzi .tu1 {
+				width: 98px;
+				height: 15px;
+				/*background-color: maroon;*/
+				float: left;
+				margin-left: 170px;
+				margin-top: 22px;
+			}
+			
+			.rementuijian .wenzi1 .tu2 {
+				width: 372px;
+				height: 21px;
+				/*background-color: maroon;*/
+				margin-top: 10px;
+			}
+			
+			.rementuijian .wenzi .tu3 {
+				width: 112px;
+				height: 15px;
+				/*background-color: maroon;*/
+				float: left;
+				margin-left: 302px;
+				margin-top: 22px;
+			}
+			
+			.rementuijian .wenzi .tu4 {
+				width: 70px;
+				height: 15px;
+				/*background-color: maroon;*/
+				float: left;
+				margin-left: 302px;
+				margin-top: 22px;
+			}
+			
+			.rementuijian .wenzi .tu5 {
+				width: 56px;
+				height: 15px;
+				/*background-color: maroon;*/
+				float: left;
+				margin-left: 170px;
+				margin-top: 22px;
+			}
+			
+			.rementuijian .wenzi .tu6 {
+				width: 112px;
+				height: 15px;
+				/*background-color: maroon;*/
+				float: left;
+				margin-left: 302px;
+				margin-top: 22px;
+			}
+			
+			.rementuijian .wenzi .tu7 {
+				width: 98px;
+				height: 15px;
+				/*background-color: maroon;*/
+				float: left;
+				margin-left: 302px;
+				margin-top: 22px;
+			}
+			
+			.bottom {
+				width: 100%;
+				background-color: black;
+				overflow: hidden;
+				height: 295px;
+			}
+			
+			.bottom_content {
+				width: 1200px;
+				height: 195px;
+				background-image: url(imgs/矩形9.png);
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 56px;
+			}
+			
+			.bottom .bottom_content .saoma {
+				width: 400px;
+				height: 195px;
+				/*background-color: lightblue;*/
+				float: left;
+			}
+			
+			.bottom .bottom_content .saoma .ma {
+				width: 143px;
+				height: 143px;
+				margin: 10px auto;
+			}
+			
+			.bottom .bottom_content .saoma p {
+				font-size: 12px;
+				color: #CBCCCC;
+				font-family: "微软雅黑";
+				/*background-color: black;*/
+				margin-top: 10px;
+			}
+			
+			.bottom .bottom_content .saoma img {
+				/*background-color: yellow;*/
+				display: block;
+				margin-top: 30px;
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="logo">
+				<img src="imgs/2.png" />
+				<p>WATCH</p>
+			</div>
+			<div class="nav">
+
+			</div>
+
+			<ul class="nav1">
+				<li class="shouye">
+					<a href="index.html">网站首页</a></li>
+				<li class="guanyu">
+					<a href="1.html">关于我们</a>
+				</li>
+				<li class="chanpin">产品中心
+					<ul>
+						<li class="pin">
+							<a href="2.html">机械表</a></li>
+						<li class="pin">
+							<a href="3.html">表带</a></li>
+					</ul>
+				</li>
+				<li class="xlogo"><img src="imgs/03.png" /></li>
+				<li class="xinwen">
+					<a href="4.html">新闻中心</a></li>
+				<li class="zhaona">
+					<a href="5.html">招纳贤士</a></li>
+				<li class="lianxi">
+					<a href="6.html">联系我们</a></li>
+
+			</ul>
+
+		</div>
+		<!--内容-->
+		<div class="women">
+			<div class="daohang">
+				<img class="logo2" src="img/logo2.png" />
+				<img class="wangzhan" src="img/61.png" />
+				<img class="jiantou" src="img/59.png" />
+				<img class="jiantou" src="img/59.png" />
+				<img class="biaodai1" src="img/57.png" />
+
+			</div>
+			<!--热门推荐-->
+			<div class="rementuijian">
+				<div class="remen">
+					<img src="imgs/2.png" />
+					<p>
+						———————— 产品中心 ————————
+					</p>
+				</div>
+				<div class="goods">
+					<a href="7.html" target="_blank"><img src="imgss/24.png" /></a>
+					<a href="7.html" target="_blank"><img src="imgss/25.png" /></a>
+					<a href="7.html" target="_blank"><img src="imgss/22.png" /></a>
+				</div>
+				<div class="wenzi">
+					<img class="tu1" src="imgss/17.png" />
+					<img class="tu3" src="imgss/18.png" />
+					<img class="tu4" src="imgss/28.png" />
+				</div>
+				<div class="goods1">
+					<a href="7.html" target="_blank"><img src="imgss/21.png" /></a>
+					<a href="7.html" target="_blank"><img src="imgss/23.png" /></a>
+					<a href="7.html" target="_blank"><img src="imgss/26.png" /></a>
+				</div>
+				<div class="wenzi">
+					<img class="tu5" src="imgss/27.png" />
+					<img class="tu6" src="imgss/19.png" />
+					<img class="tu7" src="imgss/20.png" />
+				</div>
+				<div class="wenzi1">
+					<img class="tu2" src="img/40.png" />
+				</div>
+			</div>
+		</div>
+		<!--底部导航-->
+		<div class="bottom">
+			<div class="bottom_content">
+				<div class="saoma">
+					<img class="ma" src="imgs/14.png" />
+					<p>小小手表微信公众号</p>
+				</div>
+				<div class="saoma">
+					<p>小小手表期待您的光临 &nbsp; &nbsp; &nbsp;.........................................................................................</p>
+					<img src="imgs/矢量智能对象10.png" />
+					<img src="imgs/矢量智能对象11.png" />
+					<img src="imgs/矢量智能对象12.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

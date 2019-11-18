@@ -1,0 +1,109 @@
+.neirong4 {
+	width: 1200px;
+	height: 80px;
+	/*background-color: #00FFFF;*/
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.shangbiao {
+	width: 1180px;
+	height: 42px;
+	/*background-color: sandybrown;*/
+	margin: 29px auto;
+	overflow: hidden;
+}
+
+.box1 {
+	width: 164px;
+	height: 42px;
+	/*background-color: aliceblue;*/
+	float: left;
+	margin-left: 60px;
+	overflow: hidden;
+}
+
+.box2 {
+	width: 130px;
+	height: 42px;
+	/*background-color: darkblue;*/
+	float: left;
+	margin-left: 60px;
+	text-align: right;
+	padding: 5px;
+}
+
+.tb,
+.tb1,
+.tb2 {
+	width: 42px;
+	height: 42px;
+	background-image: url(../img/header-total.gif);
+	float: left;
+}
+
+.tb {
+	background-position-x: 542px;
+	background-position-y: -103px;
+}
+
+.tb1 {
+	background-position-x: 542px;
+	background-position-y: -146px;
+}
+
+.tb2 {
+	background-position-x: 542px;
+	background-position-y: -189px;
+}
+
+.wz {
+	color: #5C5C5C;
+	font-size: 16px;
+	float: left;
+	text-align: center;
+	line-height: 42px;
+	margin-left: 10px;
+}
+
+.gengxin {
+	color: #5C5C5C;
+	font-size: 16px;
+}
+
+.ju {
+	margin-top: -10px;
+	color: #5C5C5C;
+	opacity: 0.5;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.time-item strong {
+	background: #FF2D5E;
+	color: #fff;
+	line-height: 49px;
+	font-size: 36px;
+	font-family: Arial;
+	padding: 0 10px;
+	
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#day_show {
+	float: left;
+	line-height: 49px;
+	color: #c71c60;
+	font-size: 32px;
+	margin: 0 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.item-title .unit {
+	background: none;
+	line-height: 49px;
+	font-size: 24px;
+	padding: 0 10px;
+	float: left;
+}

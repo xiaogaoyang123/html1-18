@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.nav {
+				width: 300px;
+				padding: 10px;
+				/*background-color: burlywood;*/
+				border: 2px solid royalblue;
+				overflow: hidden;
+			}
+			
+			.goodsType {
+				width: 50%;
+				list-style: none;
+				line-height: 60px;
+				border-bottom: 2px dotted #DEB887;
+				float: left;
+			}
+			
+			.goodsType:hover {
+				color: red;
+			}
+			
+			.goodsType img {
+				width: 50px;
+				height: 50px;
+				vertical-align: middle;
+				margin-right: 20px;
+			}
+			
+			.goodsList {
+				width: 1200px;
+				background-color: bisque;
+				margin: 30px auto;
+				/*height: 1000px;*/
+				padding: 10px;
+				overflow: hidden;
+			}
+			
+			.goodsList .item {
+				width: 218px;
+				height: 300px;
+				float: left;
+				border: 1px solid #A9A9A9;
+				margin: 5px;
+				padding: 5px;
+			}
+			
+			.goodsList .item img {
+				width: 100%;
+			}
+			.goodsList .item *{
+				    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="nav">
+			<ul></ul>
+		</div>
+		<div class="goodsList">
+			
+		</div>
+	</body>
+	
+	<script src="//cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.ajax({
+			type: "get",
+			url: "http://127.0.0.1/w/website/findGoodsTypeList",
+			async: true,
+			success: function(res) {
+				console.log(res.data);
+				var shuju = res.data;
+				var nav = $(".nav ul");
+				$.each(shuju, function(index, item) {
+					console.log(item.name);
+					var str = `<li class='goodsType'> <img src = '${item.icon}'/>${item.name} </li>`;
+					nav.append(str)
+				});
+			}
+		});
+
+		function getGoods(types,num) {
+			$.ajax({
+				type: "get",
+				url: "http://127.0.0.1/w/website/findGoodsList",
+				async: true,
+				data: {
+					"info": types,
+					"pageNo":num
+				},
+				success: function(res) {
+					var shuju = res.data.tbk_dg_material_optional_response.result_list.map_data;
+					console.log(shuju)
+					$.each(shuju, function(index, item) {
+								
+						str = `
+								<div class="item">
+									<a href="${item.item_url}">
+										<img src="${item.pict_url}"/>
+										<h4>${item.short_title}</h4>
+									</a>
+									<p>
+										<span>现价:${item.zk_final_price}元</span>
+										<span>月销量:${item.tk_total_sales}</span>
+									</p>
+									<p>
+										<span>卷后:${item.zk_final_price-item.coupon_amount}元</span>	
+										<span>领劵:${item.coupon_amount}元</span>	
+										
+									</p>
+								</div>
+						`;
+						$(".goodsList").append(str);
+					});
+				}
+			});
+		}
+
+		getGoods("女装",1)
+
+	</script>
+
+</html>

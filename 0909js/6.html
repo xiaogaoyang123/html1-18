@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 50px;
+				margin: 10px;
+				background-color: firebrick;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="button" onclick="th()" value="替换" />
+		<div>001</div>
+		<div>002</div>
+		<div>003</div>
+
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementsByTagName("div"); //放里面外面没有影响
+		function th() {
+			var a1 = box[1].cloneNode(true);
+			document.body.appendChild(a1);
+		}
+	</script>
+
+</html>

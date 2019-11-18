@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		//构造函数
+//		1） 隐秘的创建一个新的空对象
+//		2） 将这个函数里面的this绑定到刚才创建隐秘新对象上
+//		3） 执行函数体里面的语句
+//		4） 返回这个新的对象
+
+		function People() {
+			this.name = "小明";
+			this.age = 18;
+			this.sex = "男";
+		}
+		var xiaoming = new People();
+
+		console.log(xiaoming);
+		console.log(xiaoming.age);
+		console.log(typeof xiaoming);
+	</script>
+
+</html>

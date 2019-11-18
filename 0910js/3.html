@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p {
+				width: 200px;
+				height: 50px;
+				background-color: darkcyan;
+				color: white;
+				margin: 10px;
+				text-align: center;
+				line-height: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>你</p>
+		<p>害</p>
+		<p>怕</p>
+		<p>黑</p>
+		<p>暗</p>
+		<p>吗</p>
+	</body>
+	<script type="text/javascript">
+		var ps = document.getElementsByTagName("p");
+		//		for(var i=0;i<ps.length;i++){
+		//			ps[i].onclick=function(){
+		//				alert("我是老"+i+"点我干嘛！！")
+		//			}
+		//		}
+		
+		
+		
+		//方法一：var-let
+//		for (let i = 0; i < ps.length; i++) {
+//			ps[i].onclick = function() {
+//				alert("我是老" + i + "点我干嘛！！")
+//			}
+//		}
+
+
+
+
+		//方法二：闭包传参
+//		for (var i = 0; i < ps.length; i++) {
+//			(function(i){
+//				ps[i].onclick = function() {
+//				alert("我是老" + i + "点我干嘛！！");
+//				}
+//			})(i)
+//			
+//			}
+
+
+//方法三：强制添加属性
+		for (var i = 0; i < ps.length; i++) {
+		ps[i].index=i;
+				ps[i].onclick = function() {
+				alert("我是老" + this.index + "点我干嘛！！");
+				}
+			
+			}
+
+
+		
+	</script>
+
+</html>

@@ -1,0 +1,532 @@
+.right {
+	width: 882px;
+	height: 41px;
+	border-bottom: 1px solid #BEBEBE;
+	margin: 0 auto;
+	margin-left: 64px;
+	margin-top: 20px;
+}
+
+.right1 {
+	width: 1200px;
+	height: 41px;
+	background-color: #D8F6EC;
+}
+
+.right2 {
+	width: 1200px;
+	height: 41px;
+	background-color: #D8F6EC;
+	margin: 0 auto;
+}
+
+.right3 {
+	width: 1200px;
+	height: 41px;
+	background-color: #D8F6EC;
+	margin: 0 auto;
+	margin-top: -40px;
+}
+
+.guanyu {
+	width: 109px;
+	height: 41px;
+	border-bottom: 2px solid #01AF63;
+	font-size: 24px;
+	color: #01AF63;
+	text-align: center;
+	line-height: 41px;
+}
+
+.guanyu1 {
+	width: 210px;
+	height: 41px;
+	font-size: 24px;
+	color: #01AF63;
+	text-align: center;
+	line-height: 41px;
+	margin-top: 30px;
+	left: 10px;
+}
+
+.guanyu2 {
+	width: 210px;
+	height: 41px;
+	font-size: 24px;
+	color: #01AF63;
+	text-align: center;
+	line-height: 41px;
+	margin-top: 56px;
+}
+
+.dangqian {
+	float: left;
+	margin: -25px 130px;
+	font-size: 12px;
+}
+
+.dangqian a {
+	text-decoration: none;
+	color: #01AF63;
+}
+
+.xyf {
+	width: 1200px;
+	height: 600px;
+	/*background-color: #D8F6EC;*/
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.fc0 {
+	width: 484px;
+	height: 81px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.fc1 {
+	width: 1197px;
+	height: 392px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.pc {
+	width: 1200px;
+	height: 400px;
+	/*background-color: cadetblue;*/
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.shang {
+	width: 275px;
+	height: 160px;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	transition: all .5s;
+}
+
+.pc1:hover .shang {
+	display: block;
+}
+
+.pc2:hover .shang {
+	display: block;
+}
+
+.pc3:hover .shang {
+	display: block;
+}
+
+.pc4:hover .shang {
+	display: block;
+}
+
+.pc5:hover .shang {
+	display: block;
+}
+
+.pc6:hover .shang {
+	display: block;
+}
+
+.pc7:hover .shang {
+	display: block;
+}
+
+.pc8:hover .shang {
+	display: block;
+}
+
+.kuang1 {
+	width: 10px;
+	height: 10px;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	transition: all .5s;
+}
+
+.pc1:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc2:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc3:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc4:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc5:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc6:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc7:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.pc8:hover .kuang1 {
+	top: 60px;
+	left: 50px;
+}
+
+.kuang2 {
+	width: 10px;
+	height: 10px;
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	transition: all .5s;
+}
+
+.pc1:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc2:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc3:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc4:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc5:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc6:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc7:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.pc8:hover .kuang2 {
+	top: 60px;
+	right: 50px;
+}
+
+.kuang3 {
+	width: 10px;
+	height: 10px;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	position: absolute;
+	bottom: -10px;
+	left: -10px;
+	transition: all .5s;
+}
+
+.pc1:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc2:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc3:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc4:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc5:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc6:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc7:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.pc8:hover .kuang3 {
+	bottom: 60px;
+	left: 50px;
+}
+
+.kuang4 {
+	width: 10px;
+	height: 10px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
+	transition: all .5s;
+}
+
+.pc1:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc2:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc3:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc4:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc5:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc6:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc7:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.pc8:hover .kuang4 {
+	bottom: 60px;
+	right: 50px;
+}
+
+.txt1 {
+	width: 275px;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.pc1 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pc2 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 308px;
+}
+
+.pc3 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 618px;
+}
+
+.pc4 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 925px;
+}
+
+.pc5 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 186px;
+	left: 0;
+}
+
+.pc6 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 186px;
+	left: 308px;
+}
+
+.pc7 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 186px;
+	left: 618px;
+}
+
+.pc8 {
+	width: 275px;
+	height: 160px;
+	float: left;
+	position: absolute;
+	top: 186px;
+	left: 925px;
+}
+
+.zuopin {
+	width: 1200px;
+	height: 475px;
+	/*background-color: navajowhite;*/
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+.z1 {
+	width: 366px;
+	height: 226px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+}
+
+.z1 img,.z2 img,.z3 img,.z4 img,.z5 img,.z6 img,.z7 img,.z8 img{
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s;
+}
+
+.z1 img:hover,.z2 img:hover,.z3 img:hover,.z4 img:hover,.z5 img:hover,.z6 img:hover,.z7 img:hover,.z8 img:hover{
+	transform: scale(1.2, 1.2);
+}
+.z2 {
+	width: 269px;
+	height: 189px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-left: 374px;
+}
+.z3 {
+	width: 270px;
+	height: 262px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-left: 652px;
+}
+.z4 {
+	width: 269px;
+	height: 189px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-left: 931px;
+}
+.z5 {
+	width: 366px;
+	height: 226px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-top: 235px;
+	left: 0;
+}
+.z6 {
+	width: 270px;
+	height: 262px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-left: 374px;
+	margin-top: 198px;
+}
+.z7 {
+	width: 269px;
+	height: 189px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-left: 652px;
+	margin-top: 270px;
+}
+.z8 {
+	width: 270px;
+	height: 262px;
+	/*background-color: navy;*/
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	overflow: hidden;
+	margin-left: 931px;
+	margin-top: 197px;
+}

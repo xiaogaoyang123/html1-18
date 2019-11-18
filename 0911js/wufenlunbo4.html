@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.banner{
+				width: 820px;
+				height: 150px;
+				border: 2px solid yellowgreen;			
+				margin: 30px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			ul {
+				list-style: none;
+				width: 50000px;
+				height: 150px;
+				position: absolute;
+			}
+			
+			li {
+				width: 200px;
+				float: left;
+				background-color: saddlebrown;
+				margin: 0px 0px 0px 5px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="banner">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var lis = document.querySelector("ul");
+		lis.innerHTML += lis.innerHTML;
+		var l = 0;
+		var timer;
+		
+		timer = setInterval(function(){
+			l-=20;
+			if(l<-820){
+				l=0;
+			}
+			lis.style.left = l+"px";
+			
+		},300);
+		
+		
+	</script>
+
+</html>

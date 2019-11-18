@@ -1,0 +1,122 @@
+.haohuo {
+	width: 1200px;
+	height: 50px;
+	/*background-color: seashell;*/
+}
+
+.shangpin1 {
+	width: 1200px;
+	height: 50px;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.hs {
+	width: 1200px;
+	height: 50px;
+	/*background-color: seashell;*/
+	overflow: hidden;
+}
+
+.tuijian {
+	width: 120px;
+	height: 30px;
+	color: #555555;
+	margin: 0 auto;
+	padding-left: 5px;
+	border-left: 3px solid #F01A61;
+	font-family: "黑体";
+	font-weight: bold;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+}
+
+.shishi {
+	width: 200px;
+	height: 50px;
+	/*background-color: aliceblue;*/
+	color: #BE9F9F;
+	font-size: 14px;
+	line-height: 50px;
+	float: left;
+}
+
+.xinpin {
+	width: 1200px;
+	background-color: white;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.xinpin .item {
+	width: 240px;
+	height: 340px;
+	/*background-color: white;*/
+	overflow: hidden;
+	float: left;
+	border: 1px solid #F1F1F1;
+}
+
+.xinpin .item:hover {
+	box-shadow: 0px 0px 5px #000000;
+}
+
+.xinpin .item a {
+	color: #666666;
+	text-decoration: none;
+}
+
+.xinpin .item h6:hover {
+	color: red;
+}
+
+.xinpin .item0 {
+	width: 210px;
+	height: 210px;
+	margin-top: 10px;
+	margin-left: 14px;
+}
+
+.xinpin .item0 img {
+	width: 100%;
+	height: 100%;
+}
+
+.xinpin .item1 {
+	width: 240px;
+	height: 120px;
+	margin-left: 14px;
+	margin-top: 20px;
+}
+
+.xinpin .item1 .xian {
+	color: #FF0100;
+	margin-left: 0px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.xinpin .item1 .changjia{
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+	margin-left: 0px;
+}
+.xinpin .item1 .yue {
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+	margin-left: 80px;
+}
+
+.xinpin .item * {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.xinpin .item1 p {
+	margin-top: 10px;
+}

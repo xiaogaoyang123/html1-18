@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 1000px;
+				height: 500px;
+				background-color: darkseagreen;
+				margin: 30px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.banner {
+				width: 12000px;
+				height: 500px;
+				background-color: cadetblue;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.banner img {
+				float: left;
+			}
+			
+			#btn1 {
+				width: 80px;
+				height: 100px;
+				background-color: rgba(0, 0, 0, 0.3);
+				font-size: 40px;
+				color: darkgray;
+				position: absolute;
+				top: 200px;
+				left: 0;
+				border: none;
+				outline: none;
+				display: none;
+			}
+			
+			.box:hover #btn1 {
+				display: block;
+			}
+			
+			#btn2 {
+				width: 80px;
+				height: 100px;
+				background-color: rgba(0, 0, 0, 0.3);
+				font-size: 40px;
+				color: darkgray;
+				position: absolute;
+				top: 200px;
+				right: 0;
+				border: none;
+				outline: none;
+				display: none;
+			}
+			
+			.box:hover #btn2 {
+				display: block;
+			}
+			
+			.point {
+				width: 200px;
+				height: 16px;
+				/*background-color: red;*/
+				position: absolute;
+				bottom: 30px;
+				left: 400px;
+			}
+			
+			.pot {
+				width: 16px;
+				height: 16px;
+				background-color: darkgray;
+				float: left;
+				border-radius: 50%;
+				margin-left: 15px;
+			}
+			.pot:nth-child(1){
+				background-color: dimgray;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="banner">
+				<img width="1000px" height="500px" src="img/0.jpg" />
+				<img width="1000px" height="500px" src="img/1.jpg" />
+				<img width="1000px" height="500px" src="img/2.jpg" />
+				<img width="1000px" height="500px" src="img/3.jpg" />
+				<img width="1000px" height="500px" src="img/4.jpg" />
+			</div>
+			<input type="button" name="" id="btn1" value="<" />
+			<input type="button" name="" id="btn2" value=">" />
+			<div class="point">
+				<p class="pot"></p>
+				<p class="pot"></p>
+				<p class="pot"></p>
+				<p class="pot"></p>
+				<p class="pot"></p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box=document.querySelector(".box");
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var banner = document.getElementsByClassName("banner")[0];
+		var pot = document.querySelectorAll(".pot");
+		var i = 0;
+		var x=0;
+		var timer;
+		banner.innerHTML += banner.innerHTML;
+		btn1.onclick=function(){
+			clearInterval(timer);
+			timer = setInterval(qiehuan1,100);
+			donghua1();
+		}
+		btn2.onclick=function(){
+			bofang();
+			
+		}
+		function bofang(){
+			clearInterval(timer);
+			timer = setInterval(qiehuan,100);
+			donghua();
+		}
+		function donghua () {
+			i++;
+			for(var j=0;j<pot.length;j++){
+				pot[j].style.backgroundColor="darkgray";
+			}
+			if(i>4){
+				i=0;
+			}
+			pot[i].style.backgroundColor="dimgray";
+		}
+		function donghua1 () {
+			i--;
+			for(var j=0;j<pot.length;j++){
+				pot[j].style.backgroundColor="darkgray";
+			}
+			if(i<0){
+				i=4;
+			}
+			pot[i].style.backgroundColor="dimgray";
+		}
+		function qiehuan1(){
+			x+= 100;
+			if(x%1000==0){
+				clearInterval(timer);
+			}
+			banner.style.left = x+"px";
+			if(x>0){
+				x=-5000;
+			}
+		}
+		function qiehuan(){
+		
+			x-= 100;
+			if(x%1000==0){
+				clearInterval(timer);
+			}
+			banner.style.left = x+"px";
+			if(x<-5000){
+				x=0;
+			}	
+		}
+		var autoPlay = setInterval(bofang,2000);
+		box.onmouseover = function(){
+			clearInterval(autoPlay)
+		}
+		box.onmouseout = function(){
+			autoPlay = setInterval(bofang,2000);
+		}
+	</script>
+
+</html>
+

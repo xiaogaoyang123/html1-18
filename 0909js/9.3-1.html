@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="字号增大" />
+		<input type="button" value="字号减小" />
+		<p class="box">因为太在乎别人对自己的看法所以才活的那么累</p>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementsByClassName("box")[0];
+		var btn=document.getElementsByTagName("input");
+		var x=16;//默认字号大小
+		btn[0].onclick=function(){
+			x+=2;
+			box.style.fontSize=x+"px";
+		}
+		btn[1].onclick=function(){
+			x-=2;
+			if(x<12)
+			{
+				x=12;
+				alert("字体最小为12px");
+			}
+			box.style.fontSize=x+"px";
+		}
+		
+	</script>
+</html>

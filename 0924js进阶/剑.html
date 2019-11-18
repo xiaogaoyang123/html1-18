@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 182px;
+				height: 90px;
+				/*border: 1px solid saddlebrown;*/
+				margin-left: 50px;
+				margin-top: 100px;
+				position: absolute;
+				background-image: url(img/jian.png);
+				background-position-x: 14px;
+				background-position-y: -92px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		function jian() {
+			var box = document.querySelector(".box");
+			box.className = "box";
+			document.body.appendChild(box);
+			var x = 0;
+			var timer = setInterval(move, 300);
+
+			function move() {
+				x++;
+				if (box.left > 1000) {
+					box.die();
+				}
+
+				function die() {
+					clearInterval(timer);
+					document.body.removeChild(box);
+				}
+				
+				box.style.left = 20 * x + "px";
+				box.style.backgroundPositionX = -192 * x + "px";
+			}
+		}
+
+		jian();
+	</script>
+
+</html>

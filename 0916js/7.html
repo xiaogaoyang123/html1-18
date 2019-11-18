@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: #7FFFD4;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+	</body>
+	<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var box=$(".box");
+		/* * t: current time（当前时间）； 
+		 * b: beginning value（初始值）；
+		 * * c: change in value（变化量）； 
+		 * * d: duration（持续时间）。 */
+		t=0;
+		b=0;
+		c=1000;
+		d=100;
+		var timer=setInterval(function(){
+			t++;
+			if(t>=d){
+				clearInterval(timer);
+			}
+//			box[0].style.left=Tween.CubicEaseIn(t,b,c,d)+"px";
+			box.css("left",Tween.CubicEaseIn(t,b,c,d));
+		},30)
+	</script>
+</html>

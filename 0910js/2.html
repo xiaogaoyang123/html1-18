@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>
+			全选<input type="checkbox" id="qx" />
+		</p>
+		<p>
+			<input type="checkbox" name="ckb"/>看电影
+		</p>
+		<p>
+			<input type="checkbox" name="ckb"/>玩游戏
+		</p>
+		<p>
+			<input type="checkbox" name="ckb"/>吃饭
+		</p>
+		<p>
+			<input type="checkbox" name="ckb"/>睡觉
+		</p>
+		<p>
+			<input type="checkbox" name="ckb"/>逛街
+		</p>
+		<p>
+			<input type="checkbox" name="ckb"/>唱歌
+		</p>
+	</body>
+	<script type="text/javascript">
+		var ck = document.getElementsByTagName("input");
+		
+		var x = false;
+		ck[0].onclick = function() {
+			x = !x;
+			ck[0].checked = x;
+			if (ck[0].checked) {
+				for (var i = 1; i < ck.length; i++) {
+					ck[i].checked = true;
+				}
+			} else {
+				for (var i = 1; i < ck.length; i++) {
+					ck[i].checked = false;
+				}
+			}
+		}
+		var items=document.getElementsByName("ckb");
+		for (var i=0;i<items.length;i++) {//对每个item设置点击
+			items[i].onclick=function(){
+				var number=0;//记录选中的个数
+				for (var j=0;j<items.length;j++) {
+					if(items[j].checked)
+					{
+						number++;
+					}
+				}
+				document.getElementById("qx").checked=(items.length==number);
+			}
+		}
+	</script>
+
+</html>

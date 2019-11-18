@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: darkcyan;
+				margin: 10px;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: darkviolet;
+				margin: 100px;
+			}
+			/*.box:hover .box1{
+				display: none;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+		<div class="box1">
+			
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var box=$(".box");
+		var box1=$(".box1");
+		box.hover(function(){
+			box1.css("display","none");
+			box1.hide();
+			console.log(0);
+		},function(){
+			box1.css("display","block");
+			box1.show();
+			console.log(1)
+		})
+	</script>
+</html>

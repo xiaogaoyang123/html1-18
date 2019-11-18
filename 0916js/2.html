@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 200px;
+				height: 200px;
+				background-color: aquamarine;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var box=$(".box");
+	box.animate({"left":1000},3000,function(){
+		$(this).css("background-color","#B22222")
+	})
+	box.animate({"top":500},3000,function(){
+		$(this).css("background-color","chartreuse")
+	})
+	box.animate({"left":0,"top":0},3000,function(){
+		$(this).css("background-color","darkorchid")
+	})
+	</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input type="button" name="" id="" value="隐藏" />
+		<p>我们段落内容，点击“隐藏”按钮我就会消失</p>
+
+		<input type="button" name="" id="" value="隐藏" />
+		<p>我们段落内容，点击“隐藏”按钮我就会消失</p>
+
+
+        <input type="button" name="" id="" value="隐藏" />
+		<span id="box" style="color: red;">
+			点我停止动画
+		</span>
+		<p>我们段落内容，点击“隐藏”按钮我就会消失</p>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("input:first").click(function() {
+			$("p").eq(0).hide("slow", function() {
+				alert("段落现在被隐藏了");
+			})
+		})
+
+		$("input").eq(1).click(function() {
+			$("p").eq(1).hide(1000);
+			alert("段落现在被隐藏了");
+
+		})
+		$("input").eq(2).click(function() {
+			$("p").eq(2).hide(5000, function() {
+				alert("段落现在被隐藏了");
+			});
+		})
+		$("#box").click(function(){
+			$("p").eq(2).stop(false,true);
+		})
+	</script>
+
+</html>

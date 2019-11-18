@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 900px;
+				height: 400px;
+				/*background-color: red;*/
+				/*margin: 30px auto;*/
+			}
+			
+			.pic {
+				width: 400px;
+				height: 400px;
+				background-image: url(img/11.jpg);
+				background-size: 400px 400px;
+				/*opacity: .5;*/
+				float: left;
+				position: relative;
+			}
+			
+			.kuang {
+				width: 200px;
+				height: 200px;
+				background-color: black;
+				opacity: .5;
+				float: left;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			
+			.big_pic {
+				width: 400px;
+				height: 400px;
+				background-color: cadetblue;
+				float: left;
+				margin-left: 50px;
+				background-image: url(img/11.jpg);
+				background-size: 800px 800px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="pic">
+				<div class="kuang"></div>
+			</div>
+			<div class="big_pic"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var pic = document.getElementsByClassName("pic")[0];
+		var kuang = document.getElementsByClassName("kuang")[0];
+		var big_pic = document.getElementsByClassName("big_pic")[0];
+		pic.onmousemove = function(event) {
+			kuang.style.display = "block";
+			var x = event.clientX - kuang.offsetWidth / 2;
+			var y = event.clientY - kuang.offsetHeight / 2;
+			if (x >= 200) {
+				x = 200
+			}
+			if (x <= 0) {
+				x = 0;
+			}
+			if (y >= 200) {
+				y = 200
+			}
+			if (y <= 0) {
+				y = 0;
+			}
+			console.log(x, y)
+			kuang.style.left = x + "px";
+			kuang.style.top = y + "px";
+			big_pic.style.backgroundPositionX = -x * 2 + "px";
+			big_pic.style.backgroundPositionY = -y * 2 + "px";
+		}
+	</script>
+
+	<ml

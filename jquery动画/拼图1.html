@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div {
+			width: 283px;
+			height: 229px;
+			/*border: 1px solid #000;*/
+			position: absolute;
+			background: url(imgs/g.jpg);
+			top: 500px;
+			left: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("div").each(function(i) {
+			$(this).css({
+					"left": 500,
+					"top": 500,
+					"background-position": -i % 2 * 283 + "px " + -parseInt(i / 2) * 229 + "px"
+				})
+				.delay(i * 50)
+				.animate({
+					"left": i % 2 * 283,
+					"top": parseInt(i / 2) * 229
+				}, 300);
+		});
+	</script>
+</body>
+
+</html>

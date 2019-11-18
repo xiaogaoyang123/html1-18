@@ -1,0 +1,44 @@
+.lunbo {
+	width: 720px;
+	height: 360px;
+	background-color: darkseagreen;
+	overflow: hidden;
+	position: relative;
+}
+
+	#myCarousel {
+		width: 720px;
+		height: 360px;
+		/*background-color: salmon;*/
+		float: left;
+	}
+	
+	.carousel-inner {
+		width: 720px;
+		height: 360px;
+		/*background-color: navajowhite;*/
+	}
+	
+	.item {
+		width: 720px;
+		height: 360px;
+		/*background-color: khaki;*/
+	}
+	
+	#myCarousel .item img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.left,
+	.right {
+		display: none;
+	}
+	
+	#myCarousel:hover .left {
+		display: block;
+	}
+	#myCarousel:hover .right {
+		display: block;
+		margin-right: 0px;
+	}

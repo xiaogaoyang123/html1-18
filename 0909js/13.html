@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+		<p>
+			<input type="text" name="" id="" value="" />
+		</p>
+
+	</body>
+	<script type="text/javascript">
+		var inp = document.getElementsByTagName("input");
+		//		for (var i = 0; i < inp.length; i++) {
+		//			inp[i].onfocus = function() {
+		//				this.style.backgroundColor = "darkcyan";
+		//			}
+		//			inp[i].onblur = function() {
+		//				this.style.backgroundColor = ""
+		//			}
+		//		}
+		for (let i = 0; i < inp.length; i++) {
+			inp[i].onfocus = function() {
+				inp[i].style.backgroundColor = "darkcyan";
+			}
+			inp[i].onblur = function() {
+				inp[i].style.backgroundColor = ""
+			}
+		}
+	</script>
+
+</html>

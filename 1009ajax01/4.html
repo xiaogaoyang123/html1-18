@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+			<p>
+				<input type="text" name="user" id="user" value="" />
+			</p>
+			<p>
+				<input type="password" name="pas" id="pas" value="" />
+			</p>
+			<input type="button" id="btn" value="提交" />
+	
+	</body>
+	<script type="text/javascript">
+		
+		var btn = document.querySelector("#btn");
+		var user = document.querySelector("#user");
+		var pas = document.querySelector("#user");
+		btn.onclick = function(){
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4){
+					console.log(xhr.responseText);
+				}
+			}
+			xhr.open("POST","1.txt",true)
+			xhr.send("user="+user.value+"&pas="+pas.value)
+		}
+		
+		
+	</script>
+</html>

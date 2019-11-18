@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>腾讯网</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#head {
+				width: 90%;
+				height: 1000px;
+				background-color: white;
+				margin: 30px auto;
+			}
+			
+			.logo {
+				width: 130px;
+				height: 36px;
+				background-color: white;
+				margin: 30px auto;
+				margin-right: 200px;
+				vertical-align: middle;
+				float: left;
+			}
+			
+			.logo img {
+				width: 130px;
+				height: 36px;
+				vertical-align: middle;
+				/*垂直水平居中对齐*/
+			}
+			
+			.top {
+				width: 500px;
+				height: 38px;
+				background-color: #F3F6F8;
+				margin: 30px auto;
+				margin-right: 200px;
+				border: 1px solid gray;
+				border-radius: 19px;
+				float: left;
+				/*display: inline;*/
+				/*overflow: hidden;*/
+			}
+			
+			.headleft {
+				width: 88px;
+				height: 38px;
+				background-color: #F3F6F8;
+				border-radius: 19px;
+				line-height: 38px;
+				/*text-indent: 0px;*/
+				text-align: center;
+				background-image: url(img/so_arr.png);
+				background-repeat: no-repeat;
+				background-size: 15%;
+				background-position-x: 72px;
+				background-position-y: 16px;
+				color: black;
+				float: left;
+				position: relative;
+			}
+			
+			.headleft:hover {
+				background-position-y: -24px;
+			}
+			
+			.shuru {
+				width: 260px;
+				height: 38px;
+				background: #F3F6F8;
+				border: none;
+				outline: none;
+				float: left;
+				font-size: 16px;
+			}
+			
+			.headright {
+				width: 90px;
+				height: 38px;
+				line-height: 38px;
+				text-align: center;
+				color: white;
+				background-color: #1479D7;
+				border-radius: 19px;
+				float: right;
+				cursor: pointer;
+			}
+			
+			.item {
+				width: 102px;
+				overflow: hidden;
+				/*height: 300px;*/
+				/*background: forestgreen;*/
+				/*background-color: red;*/
+				display: none;
+			}
+			
+			.headleft:hover .item {
+				width: 102px;
+				background-color: white;
+				text-align: center;
+				display: block;
+			}
+			
+			.item .item1 {
+				width: 102px;
+				height: 38px;
+				text-align: center;
+				color: silver;
+				background-color: white;
+				/*border-bottom: 3px solid orange;*/
+				margin: 0 auto;
+			}
+			
+			.item1:hover {
+				color: black;
+				border-bottom: 2px solid red;
+			}
+			
+			.box1 {
+				width: 80px;
+				height: 38px;
+				margin: 20px auto;
+				background-color: white;
+				float: left;
+				/*display: inline;*/
+				background-image: url(img/icons.png);
+				background-repeat: no-repeat;
+				background-position-x: 28px;
+				background-position-y: -92px;
+			}
+			
+			.box1:hover {
+				background-position-y: -141px;
+			}
+			
+			.box2 {
+				width: 80px;
+				height: 38px;
+				margin: 20px auto;
+				margin-left: -30px;
+				background-color: white;
+				float: left;
+				background-image: url(img/icons.png);
+				background-repeat: no-repeat;
+				background-position-x: 28px;
+				background-position-y: -187px;
+			}
+			
+			.box2:hover {
+				background-position-y: -237px;
+			}
+			
+			.box3 {
+				width: 38px;
+				height: 38px;
+				background-color: #F5F5F5;
+				border: 1px solid #F3F6F8;
+				float: left;
+				text-align: center;
+				margin-left: 1172px;
+				position: absolute;
+				margin-top: 20px;
+				line-height: 38px;
+				
+			}
+			.box3 a{
+				text-decoration: none;
+				color: skyblue;
+			}
+			.box3:hover {
+				border: 1px solid skyblue;
+			}
+			
+			.zhongxin {
+				width: 100%;
+				/*height: 300px;*/
+				background-color: white;
+				margin: auto;
+				float: left;
+			}
+			
+			.item0 {
+				width: 100%;
+				height: 38px;
+				margin: auto;
+				background-color: #1479D7;
+				display: flex;
+				justify-content: space-around;
+				/*padding: 3px 5px;*/
+			}
+			
+			.item2 {
+				/*width: auto;*/
+				margin: 3px 5px;
+				/*height: 30px;*/
+				color: white;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 30px;
+				/*margin-top: 4px;*/
+				float: left;
+				list-style: none;
+				cursor: pointer;
+			}
+			
+			.item2:hover {
+				color: saddlebrown;
+				background: #cbe1ed;
+			}
+			
+			.item3 {
+				list-style: none;
+				color: white;
+				line-height: 38px;
+				width: 60px;
+				background-color: #1479D7;
+				background-image: url(img/nav_arr.png);
+				background-repeat: no-repeat;
+				background-position: 35px 16px;
+			}
+			
+			.item3:hover {
+				background-position: 35px -14px;
+			}
+			
+			.item4 {
+				width: 90%;
+				height: 80px;
+				background-color: #F3F6F8;
+				display: none;
+				margin-left: -1140px;
+				position: absolute;
+			}
+			
+			.item5 li {
+				list-style: none;
+				float: left;
+				color: #808080;
+				width: 55px;
+				margin-left: 16px;
+			}
+			
+			.item3:hover .item4 {
+				display: block;
+			}
+			
+			.item5 li:hover {
+				color: #87CEEB;
+			}
+			
+			.neirong {
+				width: 280px;
+				margin: 10px;
+				float: left;
+				border: 1px solid lightgray;
+			}
+			
+			.neirong img {
+				width: 100%;
+				float: left;
+			}
+			
+			.title {
+				width: 260px;
+				padding: 10px;
+				font-size: 18px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				float: left;
+				color: #333333;
+			}
+			
+			.zuozhe {
+				width: 260px;
+				padding: 5px 10px;
+				float: left;
+				color: #666;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div class="logo">
+				<img src="img/腾讯网.png" />
+			</div>
+			<div class="top">
+				<div class="headleft">网页
+					<ul class="item">
+						<li class="item1">图片</li>
+						<li class="item1">视频</li>
+						<li class="item1">音乐</li>
+						<li class="item1">地图</li>
+						<li class="item1">问问</li>
+						<li class="item1">百科</li>
+						<li class="item1">新闻</li>
+						<li class="item1">购物</li>
+					</ul>
+				</div>
+				<input type="text" class="shuru" />
+				<div class="headright">搜狗搜索</div>
+			</div>
+			<div class="box1">
+
+			</div>
+			<div class="box2">
+
+			</div>
+			<div class="box3"><a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101487368&redirect_uri=https%3A%2F%2Fpacaio.match.qq.com%2Fqq%2FloginBack%3Fsurl%3Dhttps%3A%2F%2Fwww.qq.com%2F&state=5b481c68e379d">
+				登录
+			</a>
+				
+			</div>
+			<div class="zhongxin">
+
+				<ul class="item0">
+					<li class="item2">新闻</li>
+					<li class="item2">视频</li>
+					<li class="item2">图片</li>
+					<li class="item2">军事</li>
+					<li class="item2">体育</li>
+					<li class="item2">NBA</li>
+					<li class="item2">娱乐</li>
+					<li class="item2">财经</li>
+					<li class="item2">科技</li>
+					<li class="item2">时尚</li>
+					<li class="item2">汽车</li>
+					<li class="item2">房产</li>
+					<li class="item2">教育</li>
+					<li class="item2">文化</li>
+					<li class="item2">游戏</li>
+					<li class="item2">星座</li>
+					<li class="item3">更多
+						<div class="item4">
+							<div class="item5">
+								<ul>
+									<li>独家</li>
+									<li>热剧</li>
+									<li>谷雨</li>
+									<li>历史</li>
+									<li>英超</li>
+									<li>CBA</li>
+									<li>明星</li>
+									<li>理财</li>
+									<li>5G</li>
+									<li>健康</li>
+									<li>车型</li>
+									<li>家具</li>
+									<li>课程</li>
+									<li>大家</li>
+									<li>动漫</li>
+									<li>公益</li>
+									<li>天气</li>
+									<li>政务</li>
+									<li>综艺</li>
+									<li>影展</li>
+									<li>国际</li>
+									<li>中超</li>
+									<li>社区</li>
+									<li>电影</li>
+									<li>证券</li>
+									<li>数码</li>
+									<li>育儿</li>
+									<li>旅游</li>
+									<li>生活</li>
+									<li>儿童</li>
+									<li>文学</li>
+									<li>享看</li>
+									<li>新国风</li>
+									<li>全部</li>
+								</ul>
+							</div>
+
+						</div>
+
+					</li>
+
+				</ul>
+
+			</div>
+			<div class="content">
+
+			</div>
+		</div>
+
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			var news = ["jiekou/xinwen.json", "jiekou/shipin.json", "jiekou/tupian.json", "jiekou/yule.json",
+				"jiekou/junshi.json", "jiekou/NBA.json", "jiekou/tiyu.json", "jiekou/caijing.json",
+				"jiekou/xinwen.json", "jiekou/shipin.json", "jiekou/tupian.json", "jiekou/yule.json",
+				"jiekou/junshi.json", "jiekou/NBA.json", "jiekou/tiyu.json", "jiekou/caijing.json"
+			];
+
+			function getNews(x) {
+				$.ajax({
+					url: news[x],
+					success: function(res) {
+						console.log(res);
+						var xinwen = res.result.data;
+						var str = "";
+						for (var i = 0; i < xinwen.length; i++) {
+							str += "<div class='neirong'><a href='" +
+								xinwen[i].url + "'><img src='" +
+								xinwen[i].thumbnail_pic_s + "' /><p class='title'>" +
+								xinwen[i].title + "</p><p class='zuozhe'>" +
+								xinwen[i].author_name + "</p><p class='zuozhe'>更新时间：" + xinwen[i].date + "</p></a></div>";
+						}
+						$(".content").html(str);
+					}
+				});
+			}
+			getNews(0);
+			$(".item0 .item2").click(function() {
+				var x = $(this).index();
+				getNews(x); 
+			})
+			
+			$(".headright").click(function() {
+				var x = $(".shuru")[0].value;
+				for (var i = 0; i < $(".item2").length; i++) {
+					if (x == $(".item2")[i].innerText) {
+						getNews(i);
+						console.log($(".item2")[i]);
+						$(".item2").eq(i).css("background-color", "#cbe1ed").siblings().css("background-color", "#1479D7");
+						$(".item2").eq(i).css("color", "#333").siblings().css("color", "white");
+
+					}
+				}
+
+			})
+		</script>
+
+</html>

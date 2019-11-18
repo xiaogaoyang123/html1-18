@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 50px;
+				margin: 10px;
+				background-color: firebrick;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>001</div>
+		<div>002</div>
+		<div>003</div>
+		<div>004</div>
+		<div>005</div>
+		<div>006</div>
+		<div>007</div>
+		<div>008</div>
+		<div>009</div>
+		<div>010</div>
+
+	</body>
+	<script type="text/javascript">
+		var box = document.getElementsByTagName("div");
+		for (var i = 0; i < box.length; i++) {
+			box[i].style.border = "2px solid black";
+			if (i % 2 == 0) {
+				box[i].style.width = "200px";
+			} else {
+				box[i].style.width = "1000px";
+			}
+		}
+	</script>
+
+</html>

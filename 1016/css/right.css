@@ -1,0 +1,148 @@
+.tejia {
+	width: 280px;
+	height: 120px;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+.tejia2 {
+	width: 280px;
+	height: 100px;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+.tejia img,
+.tejia2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.tejia1 {
+	width: 280px;
+	height: 140px;
+}
+
+.toutiao {
+	width: 280px;
+	height: 35px;
+	/*background: sandybrown;*/
+	padding-top: 10px;
+}
+
+.toutiao p {
+	width: 260px;
+	height: 25px;
+	margin: 0 auto;
+	color: #555555;
+	padding-left: 5px;
+	border-left: 3px solid #F01A61;
+	font-family: "黑体";
+	font-weight: bold;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	width: 280px;
+	height: 28px;
+	display: inline-block;
+	/*background: #efefef;*/
+	/*padding: 10px;*/
+	/*border: 1px solid #ccc;*/
+	font-family: "Microsoft YaHei";
+	margin-top: 3px;
+}
+
+.container .li-box {
+	height: 24px;
+	overflow: hidden;
+}
+
+.tixing {
+	width: 280px;
+	height: 24px;
+	overflow: hidden;
+}
+
+.li-box li {
+	width: 280px;
+	height: 24px;
+	overflow: hidden;
+}
+
+.tixing {
+	width: 80px;
+	height: 24px;
+	float: left;
+	border-radius: 50px 50px 50px 50px;
+	background-color: #F01A61;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+}
+
+.wenzi {
+	width: 180px;
+	height: 24px;
+	float: left;
+	overflow: hidden;
+	color: #555555;
+	font-size: 14px;
+	margin-left: 0px;
+}
+
+.container ul {
+	position: relative;
+	animation-name: moveUp;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-delay: 0.6s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes moveUp {
+	0% {
+		top: 0px;
+	}
+	18% {
+		top: 0px;
+	}
+	20% {
+		top: -24px;
+	}
+	38% {
+		top: -24px;
+	}
+	40% {
+		top: -48px;
+	}
+	58% {
+		top: -48px;
+	}
+	60% {
+		top: -72px;
+	}
+	78% {
+		top: -72px;
+	}
+	80% {
+		top: -96px;
+	}
+	98% {
+		top: -96px;
+	}
+}
+
+.container li {
+	line-height: 1.8;
+	color: #666;
+}

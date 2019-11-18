@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: navajowhite;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box=document.querySelector(".box");
+		var l=0;
+		var timer=setInterval(function(){
+			l+=20;
+			if(l>1000){
+				clearInterval(timer);
+			}
+			box.style.left=l+"px";
+		},100)
+	</script>
+</html>

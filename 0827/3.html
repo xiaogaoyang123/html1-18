@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 680px;
+				height: 220px;
+				/*background-color: magenta;*/
+				overflow: hidden;
+				margin-top: 50px;
+				margin-left: 50px;
+			}
+			.box1 {
+				width: 680px;
+				height: 220px;
+				/*background-color: magenta;*/
+				overflow: hidden;
+				margin-top: 5px;
+				margin-left: 50px;
+			}
+			.box0 {
+				position: relative;
+				width: 220px;
+				height: 220px;
+				float: left;
+				margin-left: 5px;
+			}
+			
+			.box0 .tupian img {
+				position: relative;
+				width: 220px;
+				height: 220px;
+				max-width: 100%;
+			}
+			
+			.box0 .info {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+				-webkit-backface-visibility: hidden;
+				/* 隐藏旋转元素的背面*/
+				backface-visibility: hidden;
+				background: rgba(0, 0, 0, 0.6);
+				/*后面这个0.6是指的背景的透明度*/
+				opacity: 0;
+				-webkit-transition: all 0.35s ease-in-out;
+				/*规定提示信息怎样出现ease-in-out以慢速度开始和结束*/
+				-moz-transition: all 0.35s ease-in-out;
+				transition: all 0.35s ease-in-out;
+			}
+			
+			.box0 a:hover .info {
+				opacity: 1;
+				/*有opacity有0变成1*/
+			}
+			
+			h3 {
+				color: white;
+				font-weight: 200;
+				margin-top: 40px;
+			}
+			
+			h6 {
+				color: white;
+				margin-top: 10px;
+				font-weight: 100;
+			}
+			
+			.in {
+				width: 180px;
+				height: 120px;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 50px;
+				border: 1px dashed white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="box0">
+				<a href="#">
+					<div class="tupian"><img src="img/31.jpg" alt="img"></div>
+					<div class="info">
+						<div class="in">
+							<h3>你看起来很好吃</h3>
+							<h6>3.4万人参加</h6>
+						</div>
+
+					</div>
+				</a>
+			</div>
+			<div class="box0">
+				<a href="#">
+					<div class="tupian"><img src="img/30.jpg" alt="img"></div>
+					<div class="info">
+						<div class="in">
+							<h3>全国十二时辰</h3>
+							<h6>22.1万人参加</h6>
+						</div>
+
+					</div>
+				</a>
+			</div>
+			<div class="box0">
+				<a href="#">
+					<div class="tupian"><img src="img/32.jpg" alt="img"></div>
+					<div class="info">
+						<div class="in">
+							<h3>你城市的夏天</h3>
+							<h6>62.4万人参加</h6>
+						</div>
+
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="box1">
+			<div class="box0">
+				<a href="#">
+					<div class="tupian"><img src="img/33.jpg" alt="img"></div>
+					<div class="info">
+						<div class="in">
+							<h3>充满烟花气的照片</h3>
+							<h6>42.6万人参加</h6>
+						</div>
+
+					</div>
+				</a>
+			</div>
+			<div class="box0">
+				<a href="#">
+					<div class="tupian"><img src="img/34.jpg" alt="img"></div>
+					<div class="info">
+						<div class="in">
+							<h3>雨后的世界</h3>
+							<h6>21.4万人参加</h6>
+						</div>
+
+					</div>
+				</a>
+			</div>
+			<div class="box0">
+				<a href="#">
+					<div class="tupian"><img src="img/35.jpg" alt="img"></div>
+					<div class="info">
+						<div class="in">
+							<h3>夜幕降临前</h3>
+							<h6>46.4万人参加</h6>
+						</div>
+
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</body>
+
+</html>

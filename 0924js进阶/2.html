@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var obj = {
+				name: "考拉",
+				age: 18,
+				sex: "男",
+				"study score": 100
+			}
+
+//			console.log(obj."study score");//错误的
+			console.log(obj["study score"]); //正确的
+			console.log(obj["a" + "ge"]); //正确的
+			var a = "sex";
+			console.log(obj[a]); //正确的
+		</script>
+	</body>
+
+</html>

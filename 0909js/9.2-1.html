@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.banner{
+				width: 500px;
+				height: 500px;
+				border: 2px solid lightslategray;
+				margin: 30px auto;
+				position: relative;
+			}
+			.banner img{
+				width: 100%;
+				height: 100%;
+			}
+			.left,.right{
+				width: 50px;
+				height: 50px;
+				background-color: seashell;
+				border-radius: 50%;
+				position: absolute;
+				top: 225px;
+				filter: alpha(opacity=30);
+			}
+			.left{
+				left: 20px;
+			}
+			.right{
+				right: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="banner">
+			<img src="img/1.jpg"/>
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var left=document.getElementsByClassName("left")[0];
+		var right=document.getElementsByClassName("right")[0];
+		var banner=document.getElementsByTagName("img")[0];
+		var x=1;
+		right.onclick=function(){
+			x++;
+			if(x>8){
+				x=1;
+			}
+			banner.src="img/"+x+".jpg";
+		}
+		left.onclick=function(){
+			x--;
+			if(x<1){
+				x=8;
+			}
+			banner.src="img/"+x+".jpg";
+		}
+	</script>
+</html>

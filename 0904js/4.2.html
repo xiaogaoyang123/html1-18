@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		function jiecheng(x) {
+			var ji = 1;
+			for (var i = x; i > 0; i--) {
+				ji *= i;
+			}
+			return ji;
+		}
+
+		function sanweishu(y) {
+			var sum = 0;
+			var gewei = y % 10;
+			var shiwei = parseInt(y / 10) % 10;
+			var baiwei = parseInt(y / 100);
+			sum = jiecheng(gewei) + jiecheng(shiwei) + jiecheng(baiwei);
+			if (sum == y) {
+				console.log(y);
+			}
+
+		}
+		for (var i = 100; i < 1000; i++) {
+			sanweishu(i);
+		}
+	</script>
+
+</html>
